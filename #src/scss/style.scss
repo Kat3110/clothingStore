@@ -9,3 +9,136 @@
 //     }
 // }
 @import "fonts";
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+}
+
+.page {
+  width: 1440px;
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+  background: transparent url(../img/Фон.png) no-repeat center;
+  height: 900px;
+}
+
+.header {
+  &__menu {
+    font-family: "Raleway", sans-serif;
+    width: 1140px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 24px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &_burger {
+      background: transparent url(../img/burger.svg) no-repeat center;
+      width: 34px;
+      height: 24px;
+    }
+    &_link {
+      width: 233px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: #fff;
+      }
+    }
+    &_logo {
+      width: 158px;
+      height: 40px;
+      // TODO
+      //   picture {
+      //     height: 40px;
+      //   }
+    }
+    &_box {
+      display: flex;
+      justify-content: space-around;
+      width: 131px;
+      height: 21px;
+    }
+    &_language {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    &_language::after {
+      content: "";
+      position: absolute;
+      background: transparent url(../img/arrow.svg) no-repeat 6px 6px;
+      width: 18px;
+      height: 18px;
+    }
+    &_icon {
+      display: flex;
+      justify-content: space-between;
+      width: 175px;
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+.new {
+  display: flex;
+  margin: 329px auto 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 46px;
+    line-height: 54px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.85;
+    width: max-content;
+  }
+  span {
+    width: 120px;
+    border-top: 1px solid white;
+    display: block;
+    margin: 20px 0;
+  }
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    width: max-content;
+  }
+  &_text::after {
+    content: "";
+    position: absolute;
+    background: transparent url(../img/arrow.svg) no-repeat center;
+    transform: rotate(-90deg);
+    width: 18px;
+    height: 18px;
+  }
+}

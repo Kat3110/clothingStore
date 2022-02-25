@@ -1,5 +1,3 @@
-
-
 //JS-функция определения поддержки WebP
 function testWebP(callback) {
 

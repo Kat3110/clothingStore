@@ -1,5 +1,3 @@
-@@include('alert.js')
-
 //JS-функция определения поддержки WebP
 function testWebP(callback) {
 

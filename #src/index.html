@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.min.css" />
 
-    <title>Gulp</title>
+    <title>Yanki</title>
   </head>
 
   <body>
-    @@include('_header.html')
-    <!-- подключение шапкИ сайта, отдельный файл в котором будет описываться хедер на любой страницу -->
+    <div class="page">
+      @@include('_header.html')<!-- подключение header отдельной страницей -->
+      <section class="new">
+        <h1 class="new__title">Новая коллекция</h1>
+        <span></span>
+        <p class="new__text">Смотреть Новинки</p>
+      </section>
+    </div>
   </body>
 </html>
