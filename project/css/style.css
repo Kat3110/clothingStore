@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Light300.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Regular400.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Medium500.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-SemiBold600.ttf) format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Bold700.ttf) format("truetype");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background: #ffa1016e;
+  width: 100%;
+  height: 560px;
+  margin: 0 auto;
+}
+
+.header__image {
+  width: 550px;
+}
+
+.header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px auto 20px;
+  padding: 0;
+}
+
+.header__text {
+  font-size: 18px;
+  font-weight: 500;
+  width: 560px;
+  margin: 0 auto 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.header__text li {
+  margin: 0px auto 30px;
+}
+
+.header__text li span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo {
+  width: 300px;
+  height: 80px;
+}
+
+.bg-light {
+  background-color: #ffa101 !important;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.btn-outline-success {
+  color: #ffa101 !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: white !important;
+}
+
+.cards {
+  background: #ffa1016e;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.cards__title {
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 auto 50px;
+}
+
+.image-animal {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 286px !important;
+  height: 320px;
+  overflow: hidden;
+}
+
+.carousel-control-prev-icon {
+  background: transparent url(../img/left.png) no-repeat center/200% !important;
+  width: 63px;
+  height: 100px;
+}
+
+.carousel-control-next-icon {
+  background: transparent url(../img/right.png) no-repeat center/200% !important;
+  width: 63px;
+  height: 100px;
+}
+
+.webp .carousel-control-prev-icon { background: transparent url(../img/left.webp) no-repeat center/200% !important; }
+
+.webp .carousel-control-next-icon { background: transparent url(../img/right.webp) no-repeat center/200% !important; }
