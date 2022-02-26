@@ -128,10 +128,10 @@ function watchFiles() {
     gulp.watch([path.watch.js],js);
     gulp.watch([path.watch.img],images);
 };
-// //очищение dist от ненужных файлов
-// function clean() {
-//     return del(path.clean);
-// };
+//очищение dist от ненужных файлов
+function clean() {
+    return del(path.clean);
+};
 //сценарий выполнения
 let build = gulp.series(clean, gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);

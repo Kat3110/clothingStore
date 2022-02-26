@@ -38,12 +38,12 @@ button {
 
 .container {
   width: 1140px;
+  margin: 0 auto;
 }
 
 .header__menu {
   font-family: "Raleway", sans-serif;
   height: 40px;
-  margin: 0 auto;
   padding: 24px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,6 +217,10 @@ button {
 
 .returnswap .header__menu_language {
   color: #252525;
+}
+
+.returnswap {
+  background: none;
 }
 
 .new {
@@ -414,7 +418,6 @@ button {
 
 .footer {
   height: 120px;
-  margin: 0 auto;
 }
 
 .footer__list {
@@ -461,6 +464,107 @@ button {
   line-height: 14px;
   text-align: center;
   color: #252525;
+}
+
+.breadcrumb {
+  margin-top: 30px;
+}
+
+.breadcrumb__item {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #252525;
+}
+
+.breadcrumb__item li::after {
+  content: " ";
+  position: absolute;
+  -webkit-mask-image: url(../img/arrow.svg);
+          mask-image: url(../img/arrow.svg);
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-color: #e0bea2;
+  width: 18px;
+  height: 18px;
+  right: -24px;
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.breadcrumb__item li:last-of-type::after {
+  background-color: transparent;
+}
+
+.breadcrumb li {
+  margin: 0 25px 0 0;
+  display: inline;
+  position: relative;
+}
+
+.description {
+  margin: 30px auto 270px;
+}
+
+.description__box {
+  margin-bottom: 20px;
+}
+
+.description__subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: #252525;
+  margin: 0 0 20px;
+}
+
+.description p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #252525;
+  margin: 10px 0 0;
+}
+
+.description p:last-child {
+  line-height: 19px;
+  color: #252525;
+}
+
+.description__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.description__list li {
+  width: 165px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.description__list li img {
+  margin-bottom: 10px;
 }
 
 .webp .page{ background: transparent url(../img/Фон.webp) no-repeat center 0; }

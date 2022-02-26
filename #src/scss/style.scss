@@ -32,13 +32,13 @@ button {
 }
 .container {
   width: 1140px;
+  margin: 0 auto;
 }
 
 .header {
   &__menu {
     font-family: "Raleway", sans-serif;
     height: 40px;
-    margin: 0 auto;
     padding: 24px 0 0;
     display: flex;
     flex-direction: row;
@@ -164,74 +164,11 @@ button {
 .returnswap .header__menu_language {
   color: #252525;
 }
-// .header {
-//   &__menu {
-//     font-family: "Raleway", sans-serif;
-//     height: 40px;
-//     margin: 0 auto;
-//     padding: 24px 0 0;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     align-items: center;
 
-//     &_burger {
-//       background: transparent url(../img/burger.svg) no-repeat center;
-//       width: 34px;
-//       height: 24px;
-//     }
-//     &_link {
-//       font-family: "Raleway";
-//       width: 233px;
-//       font-weight: 300;
-//       font-size: 18px;
-//       line-height: 21px;
-//       text-transform: uppercase;
-//       display: flex;
-//       justify-content: space-between;
+.returnswap {
+  background: none;
+}
 
-//       a {
-//         color: #fff;
-//       }
-//     }
-//     &_logo {
-//       width: 158px;
-//       height: 40px;
-//     }
-//     &_box {
-//       display: flex;
-//       justify-content: space-around;
-//       width: 131px;
-//       height: 21px;
-//     }
-//     &_language {
-//       font-family: "Raleway";
-//       font-weight: 300;
-//       font-size: 18px;
-//       line-height: 21px;
-//       color: #fff;
-//       text-transform: uppercase;
-//     }
-//     &_language::after {
-//       content: "";
-//       position: absolute;
-//       background: transparent url(../img/arrow.svg) no-repeat 6px 6px;
-//       width: 18px;
-//       height: 18px;
-//     }
-//     &_icon {
-//       display: flex;
-//       justify-content: space-between;
-//       width: 175px;
-
-//       img {
-//         width: 25px;
-//         height: 25px;
-//       }
-//     }
-//   }
-// }
 .new {
   display: flex;
   margin: 329px auto 393px;
@@ -386,7 +323,6 @@ button {
 
 .footer {
   height: 120px;
-  margin: 0 auto;
 
   &__list {
     justify-content: space-between;
@@ -425,5 +361,81 @@ button {
     line-height: 14px;
     text-align: center;
     color: #252525;
+  }
+}
+.breadcrumb {
+  margin-top: 30px;
+
+  &__item {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #252525;
+  }
+  &__item li::after {
+    content: " ";
+    position: absolute;
+    mask-image: url(../img/arrow.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: #e0bea2;
+    width: 18px;
+    height: 18px;
+    right: -24px;
+    top: 0;
+    transform: rotate(-90deg);
+  }
+  &__item li:last-of-type::after {
+    background-color: transparent;
+  }
+  li {
+    margin: 0 25px 0 0;
+    display: inline;
+    position: relative;
+  }
+}
+.description {
+  margin: 30px auto 270px;
+  &__box {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #252525;
+    margin: 0 0 20px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #252525;
+    margin: 10px 0 0;
+  }
+  p:last-child {
+    line-height: 19px;
+    color: #252525;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      width: 165px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      color: #252525;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
