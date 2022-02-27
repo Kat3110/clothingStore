@@ -273,7 +273,11 @@ button {
   width: max-content;
 }
 
-.new_text::after {
+.new__text a {
+  color: #fff;
+}
+
+.new__text::after {
   content: "";
   position: absolute;
   background: transparent url(../img/arrow.svg) no-repeat center;

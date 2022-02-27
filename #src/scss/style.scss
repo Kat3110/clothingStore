@@ -201,8 +201,11 @@ button {
     text-transform: uppercase;
     color: #fff;
     width: max-content;
+    a {
+      color: #fff;
+    }
   }
-  &_text::after {
+  &__text::after {
     content: "";
     position: absolute;
     background: transparent url(../img/arrow.svg) no-repeat center;
