@@ -522,6 +522,31 @@ button {
   margin: 0 0 20px;
 }
 
+.description__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.description__block ol {
+  width: 550px;
+}
+
+.description__block ol li {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #252525;
+  margin: 5px 0 0;
+}
+
+.description__block ol li:first-child {
+  margin-top: 10px;
+}
+
 .description p {
   font-weight: 300;
   font-size: 16px;
@@ -565,6 +590,45 @@ button {
 
 .description__list li img {
   margin-bottom: 10px;
+}
+
+.payment {
+  margin-top: 25px;
+}
+
+.description__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #252525;
+}
+
+.payment li {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: start;
+  position: relative;
+}
+
+.payment li img {
+  width: 45px;
+  height: 50px;
+  margin: 0 15px 0 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.payment li:last-child {
+  width: 550px;
+}
+
+.payment li:first-child {
+  width: 267px;
 }
 
 .webp .page{ background: transparent url(../img/Фон.webp) no-repeat center 0; }
