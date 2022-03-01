@@ -39,6 +39,7 @@ button {
   font-family: "Raleway";
   margin: 0 auto;
   background: transparent url(../img/Фон.png) no-repeat center 0;
+  overflow: hidden;
 }
 
 .container {
@@ -279,7 +280,7 @@ button {
 .new__text::after {
   content: " ";
   display: inline-block;
-  background: transparent url(../img/arrow.svg) no-repeat center;
+  background: transparent url(../img/arrow.svg) no-repeat 1px center;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -422,7 +423,14 @@ button {
 }
 
 .footer {
-  height: 120px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-bottom: 10px;
+}
+
+.footer__menu {
+  width: 25%;
 }
 
 .footer__list {
@@ -433,15 +441,19 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
+  text-align: left;
 }
 
-.footer ul {
-  width: 250px;
+.footer h2 {
   font-family: "Raleway";
   font-weight: 300;
   font-size: 20px;
   line-height: 23px;
   color: #252525;
+}
+
+.footer ul {
+  width: 100%;
 }
 
 .footer ul li {
@@ -462,13 +474,18 @@ button {
   margin-top: 20px;
 }
 
-.footer div {
+.footer span {
   font-family: "Raleway";
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
-  text-align: center;
   color: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer a:hover {
@@ -973,6 +990,110 @@ button {
     font-size: 15px;
     line-height: 18px;
   }
+
+  .footer__list {
+    margin-bottom: 40px;
+  }
+
+  .footer h2 {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .footer ul li {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .slider__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .slider__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .slider__control {
+    right: 20px;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .slider__control[data-slide=next]::before {
+    background-size: 60%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .footer {
+    margin-bottom: 5px;
+  }
+
+  .footer__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer__menu {
+    width: 335px;
+  }
+
+  .footer__menu h2 {
+    border-bottom: 0.3px solid #252525;
+    position: relative;
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
+
+  .footer__menu ul {
+    display: none;
+  }
+
+  .footer__menu li {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .footer__menu .visible {
+    display: block;
+  }
+
+  .footer__menu h2::after {
+    content: " ";
+    width: 14px;
+    height: 14px;
+    -webkit-mask-image: url(../img/arrow.svg);
+            mask-image: url(../img/arrow.svg);
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-size: 90%;
+            mask-size: 90%;
+    background: #e0bea2;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    position: absolute;
+    right: 14px;
+    top: 4px;
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -1063,6 +1184,33 @@ button {
   .new__text::after {
     width: 16px;
     height: 16px;
+  }
+
+  .category {
+    padding: 80px 0 0;
+  }
+
+  .category__title {
+    margin: 0 0 40px;
+  }
+
+  .category__box a {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .category__box a .slider__sapn {
+    width: 99%;
+    height: 35px;
+    background: rgba(224, 190, 162, 0.75);
+  }
+
+  .category__box a img {
+    width: 99%;
+    height: 230px;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .distribution {

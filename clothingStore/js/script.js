@@ -408,3 +408,17 @@ document.addEventListener("DOMContentLoaded", function () {
     new ChiefSlider(elms[i]);
   }
 });
+
+let toggleMenu = document.querySelectorAll(".footer__menu h2");
+
+for (let i = 0; i < toggleMenu.length; i++) {
+  toggleMenu[i].addEventListener("click", function () {
+    let isUl = toggleMenu[i].nextElementSibling;
+
+    if (isUl.classList.contains("visible")) {
+      isUl.classList.remove("visible");
+    } else {
+      isUl.classList.add("visible");
+    }
+  });
+}
