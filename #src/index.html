@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/chief-slider.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/chief-slider.min.js"></script>
 
     <title>Yanki</title>
   </head>
@@ -17,23 +19,7 @@
         <span></span>
         <p class="new__text"><a href="#">Смотреть Новинки</a></p>
       </section>
-      <!-- <section class="category container">
-        <h2 class="category__title">Категории</h2>
-        <div class="category__box">
-          <a href="#"
-            ><img src="img/jackets.png" alt="куртки" /><span>Куртки</span></a
-          >
-          <a href="#"
-            ><img src="img/Пальто.png" alt="пальто" /><span>Пальто</span></a
-          >
-          <a href="#"
-            ><img src="img/FurCoats.png" alt="шубы" /><span>Шубы</span></a
-          >
-          <a href="#"
-            ><img src="img/parks.png" alt="парки" /><span>Парки</span></a
-          >
-        </div>
-      </section> -->
+      <section class="category container">@@include('_slider.html')</section>
       <section class="distribution">
         <form>
           <h1 class="distribution__subtitle">Узнайте первым о новинках</h1>
@@ -51,8 +37,20 @@
           </p>
         </form>
       </section>
-      <!-- @@include('_footer.html') -->
+      @@include('_footer.html')
       <!-- подключение footer отдельной страницей -->
     </div>
+
+    <script>
+      new ChiefSlider(".slider");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var elms = document.querySelectorAll(".slider");
+        for (var i = 0, len = elms.length; i < len; i++) {
+          // инициализация elms[i] в качестве слайдера
+          new ChiefSlider(elms[i]);
+        }
+      });
+    </script>
   </body>
 </html>

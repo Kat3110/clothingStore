@@ -16,3 +16,10 @@ testWebP(function (support) {
         document.querySelector('body').classList.add('no-webp');
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = new ChiefSlider('.slider', {
+      loop: false
+    });
+  });
