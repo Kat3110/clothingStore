@@ -38,8 +38,19 @@ button {
   font-family: "Raleway-ligth";
   font-family: "Raleway";
   margin: 0 auto;
-  background: transparent url(../img/Фон.png) no-repeat center 0;
   overflow: hidden;
+  position: relative;
+}
+
+.backgraund {
+  position: absolute;
+  width: 1440px;
+  height: 900px;
+  background: transparent url(../img/Фон.png) no-repeat center 0;
+  top: 0;
+  left: 50%;
+  margin-left: -720px;
+  z-index: -1;
 }
 
 .container {
@@ -227,7 +238,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 329px auto 393px;
+  margin: 329px auto 493px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -291,7 +302,6 @@ button {
 .category {
   margin: 0 auto 100px;
   height: 542px;
-  padding: 100px 0 0;
 }
 
 .category__title {
@@ -808,7 +818,6 @@ button {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    padding: 80px 0 0;
   }
 
   .category__title {
@@ -840,6 +849,12 @@ button {
 }
 
 @media screen and (max-width: 920px) {
+  .backgraund {
+    background: transparent url(../img/Фон2.png) no-repeat center 0;
+    width: 920px;
+    margin-left: -460px;
+  }
+
   .container {
     width: 764px;
   }
@@ -874,10 +889,13 @@ button {
     width: 175px;
   }
 
+  .new {
+    margin: 260px auto 480px;
+  }
+
   .category {
     margin: 0 auto 70px;
     height: 372px;
-    padding: 70px 0 0;
   }
 
   .category__title {
@@ -1097,6 +1115,11 @@ button {
 }
 
 @media screen and (max-width: 570px) {
+  .backgraund {
+    background: transparent url(../img/bc1.png) no-repeat center 0;
+    height: 667px;
+  }
+
   .header {
     height: 30px;
     display: grid;
@@ -1184,10 +1207,6 @@ button {
   .new__text::after {
     width: 16px;
     height: 16px;
-  }
-
-  .category {
-    padding: 80px 0 0;
   }
 
   .category__title {
@@ -1292,7 +1311,7 @@ button {
   }
 
   .new {
-    margin: 246px auto 291px;
+    margin: 246px auto 351px;
   }
 
   .new__title {
@@ -1339,4 +1358,14 @@ button {
   }
 }
 
-.webp .page{ background: transparent url(../img/Фон.webp) no-repeat center 0; }
+.webp .backgraund{ background: transparent url(../img/Фон.webp) no-repeat center 0; }
+
+@media screen and (max-width: 920px){
+
+  .webp .backgraund{ background: transparent url(../img/Фон2.webp) no-repeat center 0; }
+}
+
+@media screen and (max-width: 570px){
+
+  .webp .backgraund{ background: transparent url(../img/bc1.webp) no-repeat center 0; }
+}
