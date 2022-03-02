@@ -1,0 +1,135 @@
+.category {
+  margin: 0 auto 100px;
+  height: 542px;
+
+  &__title {
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    color: #252525;
+    margin: 0 0 50px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-family: "Raleway";
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+
+      .slider__sapn {
+        width: 274px;
+        height: 40px;
+        background: rgba(224, 190, 162, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+      }
+      img {
+        width: 274px;
+        height: 450px;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1160px) {
+  .category {
+    margin: 0 auto 80px;
+    height: max-content;
+
+    &__title {
+      margin: 0 0 45px;
+    }
+
+    &__box {
+      a {
+        .slider__sapn {
+          width: 200px;
+          height: 40px;
+          background: rgba(224, 190, 162, 0.75);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          bottom: 0;
+        }
+        img {
+          width: 200px;
+          height: 345px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 920px) {
+  .category {
+    margin: 0 auto 70px;
+    height: 372px;
+
+    &__title {
+      font-size: 30px;
+      margin: 0 0 40px;
+    }
+
+    &__box {
+      a {
+        font-size: 18px;
+
+        .slider__sapn {
+          width: 160px;
+          height: 40px;
+          background: rgba(224, 190, 162, 0.75);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          bottom: 0;
+        }
+        img {
+          width: 160px;
+          height: 290px;
+          display: block;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 570px) {
+  .category {
+    &__title {
+      margin: 0 0 40px;
+    }
+
+    &__box {
+      a {
+        font-size: 18px;
+        line-height: 21px;
+
+        .slider__sapn {
+          width: 99%;
+          height: 35px;
+          background: rgba(224, 190, 162, 0.75);
+        }
+        img {
+          width: 99%;
+          height: 230px;
+          display: block;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.breadcrumb {
+  margin: 30px auto !important;
+
+  &__item {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #252525;
+  }
+  &__item li::after {
+    content: " ";
+    position: absolute;
+    mask-image: url(../img/arrow.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: #e0bea2;
+    width: 18px;
+    height: 18px;
+    right: -24px;
+    top: 1px;
+    transform: rotate(-90deg);
+  }
+  &__item li:last-of-type::after {
+    background-color: transparent;
+  }
+  li {
+    margin: 0 25px 0 0;
+    display: inline;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .breadcrumb {
+    margin: 15px auto !important;
+
+    &__item {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    li {
+      margin: 0 24px 0 0;
+    }
+  }
+}

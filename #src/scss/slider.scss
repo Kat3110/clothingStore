@@ -1,0 +1,116 @@
+@media screen and (max-width: 782px) {
+  .slider__item {
+    flex: 0 0 33.33333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .slider__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .slider__control {
+    right: 20px;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  .slider__control[data-slide="next"]::before {
+    background-size: 60%;
+  }
+}
+.slider {
+  position: relative;
+}
+
+.slider__container {
+  overflow: hidden;
+}
+.slider__wrapper {
+  overflow: hidden;
+}
+
+.slider__items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slider_disable-transition {
+  transition: none;
+}
+.slider__control_hide {
+  display: none;
+}
+.slider__control:focus,
+.slider__control:hover {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.slider__control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg);
+  background: transparent no-repeat center;
+  background-size: 100%;
+}
+.slider__control[data-slide="next"]::before {
+  background-image: url("../img/arrow.svg");
+}
+.slider__indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.slider__indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 5px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.slider__indicators li.active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.slider__item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider__control {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  transform: translateY(-50%);
+  background: #e0bea2 !important;
+}
