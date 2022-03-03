@@ -2,6 +2,11 @@
   width: 600px;
   height: 270px;
   margin: 0 auto 100px;
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
   &__subtitle {
     font-family: "Raleway";
@@ -51,6 +56,7 @@
   &__button:focus:not(:active) {
     background: #fff;
     color: #252525;
+    border: 0.5px solid #e0bea2;
   }
   &__text {
     font-family: "Raleway-ligth";

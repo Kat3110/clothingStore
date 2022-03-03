@@ -9,7 +9,7 @@
   &__list {
     justify-content: space-between;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
     text-align: left;
   }
 
@@ -30,9 +30,13 @@
       line-height: 19px;
       color: #252525;
       margin-bottom: 10px;
+      display: flex;
       a {
         color: #252525;
         cursor: pointer;
+        div {
+          margin-right: 10px;
+        }
       }
     }
     li:nth-child(1) {

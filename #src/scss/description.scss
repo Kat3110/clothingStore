@@ -1,5 +1,5 @@
 .description {
-  margin: 30px auto 279px !important;
+  margin: 30px auto 269px !important;
   color: #252525;
 }
 .description__box {
@@ -57,8 +57,8 @@
   width: 540px;
 }
 .description__list li img {
-  width: 45px;
-  height: 50px;
+  width: 30px;
+  height: 44px;
   margin-right: 15px;
 }
 
@@ -92,7 +92,7 @@
 
 .returnswap .description__list li img {
   object-fit: contain;
-  margin: 0 0 10px;
+  margin: 0 0 2px;
 }
 .returnswap .description__box p {
   font-weight: 300;
@@ -117,10 +117,6 @@
   width: 165px;
 }
 
-.returnswap .description__list li img {
-  object-fit: contain;
-  margin: 0 0 10px;
-}
 @media screen and (max-width: 1160px) {
   .payment .description__list {
     align-items: center;
@@ -181,7 +177,7 @@
 
 @media screen and (max-width: 570px) {
   .description {
-    margin: 0 auto 60px !important;
+    margin: 0 auto 36px !important;
   }
   .payment .description__subtitle {
     font-size: 18px;
@@ -233,22 +229,26 @@
     line-height: 19px;
     margin-bottom: 17px;
   }
+  .returnswap .description__list li {
+    width: 335px;
+  }
 }
 @media screen and (max-width: 376px) {
   .returnswap .description__box p {
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   .returnswap .description__box p:last-child {
     margin-bottom: 0;
   }
   .returnswap .description__subtitle {
     margin-bottom: 15px;
+    font-size: 18px;
   }
   .returnswap .description__box {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
   .returnswap .description__list {
     width: 335px;
@@ -266,7 +266,7 @@
 
   .returnswap .description__list li img {
     object-fit: contain;
-    margin: 0 0 10px;
+    margin: 0 0 5px;
     width: 30px;
     height: 30px;
   }

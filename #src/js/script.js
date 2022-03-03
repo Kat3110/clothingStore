@@ -422,3 +422,6 @@ for (let i = 0; i < toggleMenu.length; i++) {
     }
   });
 }
+function f(a) {
+  a.value = "Вы подписались";
+}
