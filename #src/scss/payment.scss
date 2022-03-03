@@ -67,9 +67,96 @@
   color: #252525;
 }
 
-@media screen and (max-width: 376px) {
+.payment .description__list li p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}
+@media screen and (max-width: 1160px) {
+  .payment .description__list {
+    align-items: center;
+  }
+  .payment .description__list li p {
+    width: 400px;
+    font-size: 14px;
+  }
+  .payment .description__list li:last-child {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .payment .description__list {
+    align-items: center;
+    flex-direction: column;
+  }
+  .payment .description__list li {
+    width: 600px;
+    font-size: 14px;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+  }
+  .payment .description__list li:last-child {
+    width: 600px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment .description__block {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .payment .description__block ol {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 570px) {
   .description {
-    margin: 15px auto 60px !important;
-    color: #252525;
+    margin: 0 auto 60px !important;
+  }
+  .payment .description__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 15px;
+  }
+  .payment .description__block ol {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .payment .description__block {
+    margin-bottom: 15px;
+  }
+  .payment .description__block ol:last-child {
+    margin-top: 15px;
+  }
+  .payment .description__block ol li {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  .payment .description__block ol li:last-child {
+    margin-bottom: 0;
+  }
+  .payment .description__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  .payment .description__list {
+    width: 335px;
+  }
+  .payment .description__list li {
+    width: 335px;
+  }
+  .payment .description__list li:last-child {
+    width: 335px;
+  }
+  .payment .description__list li img {
+    width: 35px;
+    height: 39px;
+    margin-right: 25px;
   }
 }

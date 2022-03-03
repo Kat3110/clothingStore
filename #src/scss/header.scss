@@ -116,7 +116,7 @@
       }
     }
   }
-  .returnswap .header__menu_logo {
+  .menu__two .header__menu_logo {
     width: 180px;
     height: 40px;
     background-size: 80%;
@@ -220,7 +220,7 @@
       }
     }
   }
-  .returnswap .header__menu_logo {
+  .menu__two .header__menu_logo {
     width: 130px;
     height: 20px;
     background-size: 80%;
@@ -252,45 +252,45 @@
       }
     }
   }
-  .returnswap .header__menu_logo {
+  .menu__two .header__menu_logo {
     width: 97px;
     height: 20px;
     background-size: 100%;
   }
 }
 
-.returnswap .header__menu_burger,
-.returnswap .header__menu_icon_loupe,
-.returnswap .header__menu_icon_frame,
-.returnswap .header__menu_icon_like,
-.returnswap .header__menu_icon_basket {
+.menu__two .header__menu_burger,
+.menu__two .header__menu_icon_loupe,
+.menu__two .header__menu_icon_frame,
+.menu__two .header__menu_icon_like,
+.menu__two .header__menu_icon_basket {
   background-color: #e0bea2;
   transition: background-color 0.3s ease;
 }
 
-.returnswap .header__menu_language::after {
+.menu__two .header__menu_language::after {
   background-color: #252525;
   transition: background-color 0.3s ease;
 }
-.returnswap .svg:hover {
+.menu__two .svg:hover {
   background-color: #252525;
 }
-.returnswap .header__menu_logo {
+.menu__two .header__menu_logo {
   background: transparent url(../img/YANKI2.svg) no-repeat center;
   width: 195px;
   height: 40px;
 }
-.returnswap a {
+.menu__two a {
   color: #252525;
 }
-.returnswap a:hover {
+.menu__two a:hover {
   color: #e0bea2;
   transition: 0.3s ease;
 }
-.returnswap .header__menu_language {
+.menu__two .header__menu_language {
   color: #252525;
 }
 
-.returnswap {
+.menu__two {
   background: none;
 }
