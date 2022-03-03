@@ -7,6 +7,8 @@
 @import "breadcrumb";
 @import "description";
 @import "slider";
+@import "payment";
+@import "returnswap";
 
 * {
   padding: 0;
@@ -14,6 +16,9 @@
   list-style-type: none;
   text-decoration: none;
   border: none;
+}
+picture {
+  margin: 0;
 }
 *::before,
 *::after {
