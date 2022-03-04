@@ -1544,6 +1544,10 @@ button {
     height: 16px;
   }
 
+  .category {
+    margin-bottom: 0 !important;
+  }
+
   .category__title {
     margin: 0 0 40px;
   }

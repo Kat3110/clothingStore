@@ -109,6 +109,7 @@
 }
 @media screen and (max-width: 570px) {
   .category {
+    margin-bottom: 0 !important;
     &__title {
       margin: 0 0 40px;
     }
