@@ -14,6 +14,19 @@
   font-style: normal;
 }
 
+.header .active {
+  position: absolute;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 15px rgba(37, 37, 37, 0.07);
+          box-shadow: 0px 10px 15px rgba(37, 37, 37, 0.07);
+  top: 43px;
+  left: -150px;
+  z-index: 2;
+  width: 1440px;
+  height: 85px;
+  display: none;
+}
+
 .header__menu {
   font-family: "Raleway", sans-serif;
   height: 40px;
@@ -35,6 +48,37 @@
           align-items: center;
 }
 
+.header__menu button {
+  position: relative;
+}
+
+.header__menu .header__menu_burger-active {
+  width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 32px auto auto 153px;
+}
+
+.header__menu .header__menu_burger-active li img {
+  width: 27px;
+  height: 27px;
+}
+
+.header__menu .header__menu_burger-active li a {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #252525;
+  text-transform: uppercase;
+}
+
 .header__menu .svg {
   -webkit-mask-position: center;
           mask-position: center;
@@ -51,6 +95,19 @@
           mask-image: url(../img/burger.svg);
   width: 35px !important;
   height: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+.header__menu_burger-active li:hover {
+  opacity: 0.7;
+  -webkit-transform: 0.3s ease;
+      -ms-transform: 0.3s ease;
+          transform: 0.3s ease;
+}
+
+.header__menu_burger:hover ~ .active {
+  display: block;
 }
 
 .header__menu_link {
@@ -74,6 +131,9 @@
 
 .header__menu_link a:hover {
   opacity: 0.7;
+  -webkit-transform: 0.3s ease;
+      -ms-transform: 0.3s ease;
+          transform: 0.3s ease;
 }
 
 .header__menu_logo {
@@ -100,6 +160,8 @@
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  position: relative;
+  display: inline-block;
 }
 
 .header__menu_language::after {
@@ -115,11 +177,6 @@
           mask-image: url(../img/arrow.svg);
   width: 18px;
   height: 18px;
-}
-
-.header__menu_language {
-  position: relative;
-  display: inline-block;
 }
 
 .header__menu_language-active {
@@ -143,6 +200,9 @@
 
 .header__menu_language-active li:hover {
   opacity: 0.7;
+  -webkit-transform: 0.3s ease;
+      -ms-transform: 0.3s ease;
+          transform: 0.3s ease;
 }
 
 .header__menu_language:hover .header__menu_language-active {
@@ -185,6 +245,10 @@
           mask-image: url(../img/basket.svg);
   width: 25px;
   height: 25px;
+}
+
+.menu__two .header__menu_language-active li {
+  color: #000;
 }
 
 .menu__two .header__menu_burger,
@@ -1190,6 +1254,56 @@ button {
     width: 120px;
   }
 
+  .header .active {
+    width: 220px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    top: 34px;
+    left: -14px;
+    background: transparent;
+  }
+
+  .header__menu .header__menu_burger-active {
+    width: 220px;
+    margin: 10px 0 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .header__menu .header__menu_burger-active li img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .header__menu .header__menu_burger-active li {
+    margin: 15px auto 0 10px;
+  }
+
+  .header__menu .header__menu_burger-active li:first-child {
+    display: none;
+  }
+
+  .header__menu .header__menu_burger-active li a {
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+  }
+
+  .menu__two .header__menu_burger-active li a {
+    color: black;
+  }
+
+  .menu__two .active {
+    color: black;
+    background: #fff;
+  }
+
   .footer__list {
     margin-bottom: 40px;
   }
@@ -1298,6 +1412,9 @@ button {
     font-weight: 200;
     font-size: 14px;
     line-height: 16px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .footer__menu .visible {

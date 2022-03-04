@@ -16,6 +16,49 @@ testWebP(function (support) {
   }
 });
 
+let toggleMenu = document.querySelectorAll(".footer__menu h2");
+
+for (let i = 0; i < toggleMenu.length; i++) {
+  toggleMenu[i].addEventListener("click", function () {
+    let isUl = toggleMenu[i].nextElementSibling;
+
+    if (isUl.classList.contains("visible")) {
+      isUl.classList.remove("visible");
+    } else {
+      isUl.classList.add("visible");
+    }
+  });
+}
+function f(a) {
+  a.value = "Вы подписались";
+}
+
+let burger = document.querySelectorAll(".header__menu_burger");
+let active = document.querySelector(".active");
+let close = document.querySelector(".close");
+active.style.display = "none";
+
+burger[0].addEventListener("click", function () {
+  if (active.style.display === "none") {
+    active.style.display = "block";
+  } else {
+    active.style.display = "none";
+  }
+});
+close.addEventListener("click", function () {
+  if (active.style.display === "none") {
+    active.style.display = "block";
+  } else {
+    active.style.display = "none";
+  }
+});
+
+document.addEventListener("mousedown", function (e) {
+  if (e.target.closest(".active") === null) {
+    active.style.display = "none";
+  }
+});
+
 !(function () {
   if ("function" == typeof window.CustomEvent) return !1;
   window.CustomEvent = function (t, i) {
@@ -408,20 +451,3 @@ document.addEventListener("DOMContentLoaded", function () {
     new ChiefSlider(elms[i]);
   }
 });
-
-let toggleMenu = document.querySelectorAll(".footer__menu h2");
-
-for (let i = 0; i < toggleMenu.length; i++) {
-  toggleMenu[i].addEventListener("click", function () {
-    let isUl = toggleMenu[i].nextElementSibling;
-
-    if (isUl.classList.contains("visible")) {
-      isUl.classList.remove("visible");
-    } else {
-      isUl.classList.add("visible");
-    }
-  });
-}
-function f(a) {
-  a.value = "Вы подписались";
-}

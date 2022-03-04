@@ -15,9 +15,9 @@ let path = {
     //исходник
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"], // в массиве поставили исключение на файлы html которые начинаются с _ что бы они не шли в итоговую папку
     css: source_folder + "/scss/style.scss",
-    js: source_folder + "/js/script.js",
+    js: source_folder + "/js/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    fonts: source_folder + "/fonts/*.ttf",
+    fonts: source_folder + "/fonts/**/*.**",
   },
   watch: {
     //прослушивать
@@ -101,7 +101,11 @@ function js() {
     .pipe(dest(path.build.js)) //выгрузка исходников в результат
     .pipe(browsersync.stream()); //обновлние страницы
 }
-
+// gulp.task("fonts:copy", function () {
+//   gulp
+//     .src("src/fonts/**/*.{eot,svg,ttf,woff,woff2}")
+//     .pipe(gulp.path("**/fonts/"));
+// });
 //изображения
 function images() {
   //пути к файлам и выполнение команд
@@ -135,7 +139,7 @@ function watchFiles() {
 }
 //очищение dist от ненужных файлов
 function clean() {
-  return del(path.clean);
+  // return del(path.clean);
 }
 //сценарий выполнения
 let build = gulp.series(clean, gulp.parallel(js, css, html, images));
