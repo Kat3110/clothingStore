@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @font-face {
   font-family: "Raleway-ligth";
   src: url(../fonts/ralewayextralight.woff) format("woff"), url(../fonts/ralewayextralight.woff2) format("woff2");
@@ -994,7 +992,7 @@ button {
   position: absolute;
   width: 1440px;
   height: 900px;
-  background: transparent url(../img/Фон.png) no-repeat center 0;
+  background: transparent url(../img/bcg.png) no-repeat center 0;
   top: 0;
   left: 50%;
   margin-left: -720px;
@@ -1204,7 +1202,7 @@ button {
   }
 
   .backgraund {
-    background: transparent url(../img/Фон2.png) no-repeat center 0;
+    background: transparent url(../img/bcg2.png) no-repeat center 0;
     width: 920px;
     margin-left: -460px;
   }
@@ -1827,14 +1825,14 @@ button {
   }
 }
 
-.webp .backgraund{ background: transparent url(../img/Фон.webp) no-repeat center 0; }
+.webp .backgraund { background: transparent url(../img/bcg.webp) no-repeat center 0; }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 920px) {
 
-  .webp .backgraund{ background: transparent url(../img/Фон2.webp) no-repeat center 0; }
+  .webp .backgraund { background: transparent url(../img/bcg2.webp) no-repeat center 0; }
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 570px) {
 
-  .webp .backgraund{ background: transparent url(../img/bc1.webp) no-repeat center 0; }
+  .webp .backgraund { background: transparent url(../img/bc1.webp) no-repeat center 0; }
 }

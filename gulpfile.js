@@ -1,60 +1,52 @@
-let project_folder = require("path").basename(__dirname); //папка разраба
-let source_folder = "#src"; //папка для сдачи
-let fs = require("fs");
+let projectFolder = require("path").basename(__dirname); //папка разраба
+let sourceFolder = "#src";
 
 let path = {
   build: {
-    //хронятся пути выводов для галп(обработанные)
-    html: project_folder + "/",
-    css: project_folder + "/css/",
-    js: project_folder + "/js/",
-    img: project_folder + "/img/",
-    fonts: project_folder + "/fonts/",
+    html: projectFolder + "/",
+    css: projectFolder + "/css/",
+    js: projectFolder + "/js/",
+    img: projectFolder + "/img/",
+    fonts: projectFolder + "/fonts/",
   },
   src: {
-    //исходник
-    html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"], // в массиве поставили исключение на файлы html которые начинаются с _ что бы они не шли в итоговую папку
-    css: source_folder + "/scss/style.scss",
-    js: source_folder + "/js/*.js",
-    img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    fonts: source_folder + "/fonts/**/*.**",
+    html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
+    css: sourceFolder + "/scss/style.scss",
+    js: sourceFolder + "/js/*.js",
+    img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    fonts: sourceFolder + "/fonts/**/*.**",
   },
   watch: {
-    //прослушивать
-    html: source_folder + "/**/*.html",
-    css: source_folder + "/scss/**/*.scss",
-    js: source_folder + "/js/**/*.js",
-    img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    html: sourceFolder + "/**/*.html",
+    css: sourceFolder + "/scss/**/*.scss",
+    js: sourceFolder + "/js/**/*.js",
+    img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
   },
-  clean: "./" + project_folder + "/",
+  clean: "./" + projectFolder + "/",
 };
 
-let { src, dest } = require("gulp"), //для помощи в написании сценария
-  gulp = require("gulp"), //для выполнения каких либо отдельных задач
-  browsersync = require("browser-sync").create(), //плагин для обновления браузера
-  fileinclude = require("gulp-file-include"), // плагин для сборки html блоков
-  del = require("del"), // плагин для удаление папки dist
-  scss = require("gulp-sass")(require("sass")), //плагин scss
-  autoprefixer = require("gulp-autoprefixer"), //поддержка браузеров( 5версий)
-  group_media = require("gulp-group-css-media-queries"), //объединение медиа-запросов
-  clean_css = require("gulp-clean-css"), //сжатие и очищение Css файла
-  rename = require("gulp-rename"), //создание второго НЕ сжатого файла
-  uglify = require("gulp-uglify-es").default, //плагин для синтакс. анализа, минимизации, сжатия и улучшения JS
-  imagemin = require("gulp-imagemin"), //плагины для оптимизации изображений
-  webp = require("gulp-webp"), //конвертирование в новый формат
-  webphtml = require("gulp-webp-html"), //плагин добавления source в разметку автоматом
-  webpcss = require("gulp-webpcss"); //плагин для backgraund добавления source автоматом
+const { src, dest } = require("gulp");
+const gulp = require("gulp");
+const browsersync = require("browser-sync").create();
+const fileinclude = require("gulp-file-include");
+const del = require("del");
+const scss = require("gulp-sass")(require("sass"));
+const autoprefixer = require("gulp-autoprefixer");
+const group_media = require("gulp-group-css-media-queries");
+const clean_css = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const uglify = require("gulp-uglify-es").default;
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const webphtml = require("gulp-webp-html");
+const webpcss = require("gulp-webpcss");
 
-//работа в браузере
 function browserSync() {
-  //функция для обновления
   browsersync.init({
     server: {
-      //базовая папка
-      baseDir: "./" + project_folder + "/",
+      baseDir: "./" + projectFolder + "/",
     },
-    port: 3000, // порт по которому будет открываться браузер
-    notify: false, //отключаем табличку в браузере"браузер обновися"
+    notify: false,
   });
 }
 //обработка html
@@ -137,7 +129,7 @@ function watchFiles() {
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
 }
-//очищение dist от ненужных файлов
+
 function clean() {
   // return del(path.clean);
 }
@@ -151,7 +143,4 @@ exports.css = css;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
-exports.default = watch; // когда запускаем галп выполняется эта
-//переменная по умолчанию и будет выполнятся watch который в свою
-//очередь будет запускать browserSync(функция), который в свою
-//очередь будет делать все что нам нужно
+exports.default = watch;

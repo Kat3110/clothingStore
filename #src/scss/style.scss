@@ -43,7 +43,7 @@ button {
   position: absolute;
   width: 1440px;
   height: 900px;
-  background: transparent url(../img/Фон.png) no-repeat center 0;
+  background: transparent url(../img/bcg.png) no-repeat center 0;
   top: 0;
   left: 50%;
   margin-left: -720px;
@@ -51,7 +51,7 @@ button {
 }
 @media screen and (max-width: 920px) {
   .backgraund {
-    background: transparent url(../img/Фон2.png) no-repeat center 0;
+    background: transparent url(../img/bcg2.png) no-repeat center 0;
     width: 920px;
     margin-left: -460px;
   }
