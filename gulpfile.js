@@ -52,80 +52,68 @@ function browserSync() {
     notify: false,
   });
 }
-//обработка html
+
 function html() {
-  //пути к файлам и выполнение команд
-  return src(path.src.html) //обращение к исходнику
-    .pipe(fileinclude()) //собираем файлы
-    .pipe(webphtml()) //автоматически добавление source в html разметку(в браузере)
-    .pipe(dest(path.build.html)) //выгрузка исходников в результат
-    .pipe(browsersync.stream()); //обновлние страницы
+  return src(path.src.html)
+    .pipe(fileinclude())
+    .pipe(webphtml())
+    .pipe(dest(path.build.html))
+    .pipe(browsersync.stream());
 }
 //обработка Css
 function css() {
-  return src(path.src.css) //обращение к исходнику
-    .pipe(
-      scss({ outputStyle: "expanded" }).on("error", scss.logError) // формирование развернутого css для удобства чтения
-    )
-    .pipe(group_media()) //объединение медиа-запросов
+  return src(path.src.css)
+    .pipe(scss({ outputStyle: "expanded" }).on("error", scss.logError))
+    .pipe(group_media())
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],
         cascade: true,
-      }) //поддержка 5версий браузера
+      })
     )
-    .pipe(webpcss()) //для backgraund добавления source автоматом
-    .pipe(dest(path.build.css)) //выгрузка исходников в результат
-    .pipe(clean_css()) //сжатие и очищение css файла
+    .pipe(webpcss())
+    .pipe(dest(path.build.css))
+    .pipe(clean_css())
     .pipe(
       rename({
-        extname: ".min.css", // второй файл не сжатый переименовываем
+        extname: ".min.css",
       })
     )
-    .pipe(dest(path.build.css)) //выгрузка исходников в результат
-    .pipe(browsersync.stream()); //обновлние страницы
+    .pipe(dest(path.build.css))
+    .pipe(browsersync.stream());
 }
-//обработка js
+
 function js() {
-  //пути к файлам и выполнение команд
-  return src(path.src.js) //обращение к исходнику
-    .pipe(fileinclude()) //собираем файлы
-    .pipe(dest(path.build.js)) //выгрузка исходников в результат
-    .pipe(uglify()) //для синтакс. анализа, минимизации, сжатия и улучшения JS
-    .pipe(rename({ extname: ".min.js" })) // второй файл не сжатый переименовываем
-    .pipe(dest(path.build.js)) //выгрузка исходников в результат
-    .pipe(browsersync.stream()); //обновлние страницы
+  return src(path.src.js)
+    .pipe(fileinclude())
+    .pipe(dest(path.build.js))
+    .pipe(uglify())
+    .pipe(rename({ extname: ".min.js" }))
+    .pipe(dest(path.build.js))
+    .pipe(browsersync.stream());
 }
-// gulp.task("fonts:copy", function () {
-//   gulp
-//     .src("src/fonts/**/*.{eot,svg,ttf,woff,woff2}")
-//     .pipe(gulp.path("**/fonts/"));
-// });
 //изображения
 function images() {
-  //пути к файлам и выполнение команд
-  return src(path.src.img) //обращение к исходнику
+  return src(path.src.img)
     .pipe(
       webp({
-        quality: 70, //оптимизированное расширение(меньшн в два раза)
+        quality: 70,
       })
     )
-    .pipe(dest(path.build.img)) //выгрузка исходников в результат
-    .pipe(src(path.src.img)) //обращение к исходнику
+    .pipe(dest(path.build.img))
+    .pipe(src(path.src.img))
     .pipe(
       imagemin({
-        //плагины для сжатия и оптимизации
         progressive: true,
         svgoPlugins: [{ removeViewBox: false }],
         interlaced: true,
-        optimizationLevel: 3, //от 0 до 7
+        optimizationLevel: 3,
       })
     )
-    .pipe(dest(path.build.img)) //выгрузка исходников в результат
+    .pipe(dest(path.build.img))
     .pipe(browsersync.stream()); //обновлние страницы
 }
 
-//слежка за  файлами(быстрое обновление страницы) прослушка
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
@@ -136,7 +124,6 @@ function watchFiles() {
 function clean() {
   // return del(path.clean);
 }
-//сценарий выполнения
 let build = gulp.series(clean, gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
