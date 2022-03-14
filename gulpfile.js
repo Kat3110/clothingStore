@@ -3,21 +3,24 @@ let sourceFolder = "#src";
 
 let path = {
   build: {
-    html: projectFolder + "/",
+    // html: projectFolder + "/",
+    html: `${projectFolder}/`,
     css: projectFolder + "/css/",
     js: projectFolder + "/js/",
     img: projectFolder + "/img/",
     fonts: projectFolder + "/fonts/",
   },
   src: {
-    html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
+    html: `${sourceFolder}/*.html`,
+    // html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
     css: sourceFolder + "/scss/style.scss",
     js: sourceFolder + "/js/*.js",
     img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: sourceFolder + "/fonts/**/*.**",
   },
   watch: {
-    html: sourceFolder + "/**/*.html",
+    html: `${sourceFolder}/**/*.html`,
+    // html: sourceFolder + "/**/*.html",
     css: sourceFolder + "/scss/**/*.scss",
     js: sourceFolder + "/js/**/*.js",
     img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
