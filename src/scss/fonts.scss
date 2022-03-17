@@ -1,121 +1,22 @@
 @font-face {
 	font-family: 
-                   Raleway;
+                   raleway;
 	font-display: swap;
 	src: 
-              url("../fonts/Raleway-ExtraBoldItalic.woff2") format("woff2"), 
-              url("../fonts/Raleway-ExtraBoldItalic.woff") format("woff");
-	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   Raleway;
-	font-display: swap;
-	src: 
-              url("../fonts/Raleway-ExtraBold.woff2") format("woff2"), 
-              url("../fonts/Raleway-ExtraBold.woff") format("woff");
-	font-weight: 
-              800;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   Raleway;
-	font-display: swap;
-	src: 
-              url("../fonts/Raleway-ExtraLight.woff2") format("woff2"), 
-              url("../fonts/Raleway-ExtraLight.woff") format("woff");
+              url("../fonts/raleway-extralight.woff2") format("woff2"), 
+              url("../fonts/raleway-extralight.woff") format("woff");
 	font-weight: 
               200;
 	font-style: normal;
 }
 @font-face {
 	font-family: 
-                   Raleway;
+                   raleway;
 	font-display: swap;
 	src: 
-              url("../fonts/Raleway-Italic.woff2") format("woff2"), 
-              url("../fonts/Raleway-Italic.woff") format("woff");
+              url("../fonts/raleway-light.woff2") format("woff2"), 
+              url("../fonts/raleway-light.woff") format("woff");
 	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   ralewayextrabold;
-	font-display: swap;
-	src: 
-              url("../fonts/ralewayextrabold.woff2") format("woff2"), 
-              url("../fonts/ralewayextrabold.woff") format("woff");
-	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   Raleway;
-	font-display: swap;
-	src: 
-              url("../fonts/Raleway-ExtraLightItalic.woff2") format("woff2"), 
-              url("../fonts/Raleway-ExtraLightItalic.woff") format("woff");
-	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   ralewayextrabolditalic;
-	font-display: swap;
-	src: 
-              url("../fonts/ralewayextrabolditalic.woff2") format("woff2"), 
-              url("../fonts/ralewayextrabolditalic.woff") format("woff");
-	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   ralewayextralightitalic;
-	font-display: swap;
-	src: 
-              url("../fonts/ralewayextralightitalic.woff2") format("woff2"), 
-              url("../fonts/ralewayextralightitalic.woff") format("woff");
-	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   ralewayextralight;
-	font-display: swap;
-	src: 
-              url("../fonts/ralewayextralight.woff2") format("woff2"), 
-              url("../fonts/ralewayextralight.woff") format("woff");
-	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   ralewayitalic;
-	font-display: swap;
-	src: 
-              url("../fonts/ralewayitalic.woff2") format("woff2"), 
-              url("../fonts/ralewayitalic.woff") format("woff");
-	font-weight: 
-              400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 
-                   ralewaylight;
-	font-display: swap;
-	src: 
-              url("../fonts/ralewaylight.woff2") format("woff2"), 
-              url("../fonts/ralewaylight.woff") format("woff");
-	font-weight: 
-              400;
+              300;
 	font-style: normal;
 }

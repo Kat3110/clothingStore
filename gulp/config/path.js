@@ -19,7 +19,6 @@ export const path = {
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/style.scss`,
     html: `${srcFolder}/*.html`,
-    // fonts: `${srcFolder}/fonts/**/*.*`,
     files: `${srcFolder}/files/**/*.*`,
   },
   watch: {
