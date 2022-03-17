@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ 'title': 'Доставка' })
+
+  <body>
+    <div class="page menu__two">
+      @@include('html/header.html')<!-- подключение header отдельной страницей -->
+      <section class="breadcrumb container">
+        <ul class="breadcrumb__item">
+          <li><a href="index.html">Главная</a></li>
+          <li>Оплата и доставка</li>
+        </ul>
+      </section>
+      <section class="description container payment">
+        <div class="description__box">
+          <h2 class="description__subtitle">Оплата и доставка</h2>
+
+          <div class="description__block">
+            <ol>
+              Вы можете оплатить покупку одним из ниже перечисленных способов:
+              <li>&#8226; наложенным платежом в отделении Новой Почты</li>
+              <li>&#8226; денежным переводом Visa/MasterCard</li>
+              <li>&#8226; полная предоплата через Приват 24</li>
+            </ol>
+
+            <ol>
+              Мы готовы предложить несколько вариантов доставки:
+              <li>
+                &#8226; отправка по всей Украине в отделение Новой Почты(1-2
+                дня)
+              </li>
+              <li>
+                &#8226; международные сервисы доставки для жителей зарубежья:
+                Укрпочта( 1-3 недели ,DHL(3-7 дней)
+              </li>
+              <li>&#8226; Срок доставки: 1–2 дня с момента заказа</li>
+            </ol>
+          </div>
+        </div>
+        <h2 class="description__text">
+          Процесс оформления заказа с помощью LIQPAY:
+        </h2>
+        <ul class="description__list">
+          <li>
+            <img src="@img/delivery.svg" alt="." />
+            <p>Выбрать в корзине способ оплаты "LIQPAY";</p>
+          </li>
+          <li>
+            <img src="img/delivery2.svg" alt="." />
+            <p>Подтвердить заказ;</p>
+          </li>
+          <li>
+            <img src="@img/delivery3.svg" alt="." />
+            <p>
+              После этого Вас перенаправит на сайт LIQPAY, где вы выбираете
+              удобный для вас способ оплаты: через Приват24, или с помощью карты
+              Mastercard/VISA со всего мира.
+            </p>
+          </li>
+        </ul>
+      </section>
+      @@include('html/footer.html')
+      <!-- подключение footer отдельной страницей -->
+    </div>
+    <script src="js/active.js"></script>
+  </body>
+</html>

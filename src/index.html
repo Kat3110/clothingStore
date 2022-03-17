@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ 'title': 'YANKI' })
+
+  <body>
+    <div class="page">
+      <div class="backgraund"></div>
+      @@include('html/header.html')
+      <section class="new">
+        <h1 class="new__title">Новая коллекция</h1>
+        <span></span>
+        <p class="new__text"><a href="#">Смотреть Новинки</a></p>
+      </section>
+      <section class="category container">
+        @@include('html/slider.html')
+      </section>
+      <section class="distribution">
+        <form>
+          <h1 class="distribution__subtitle">Узнайте первым о новинках</h1>
+          <input
+            class="distribution__mail"
+            type="email"
+            placeholder="Ваш e-mail*"
+          />
+          <input
+            class="distribution__button"
+            type="button"
+            value="подписаться"
+            onclick="f(this)"
+          />
+          <p class="distribution__text">
+            Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих
+            персональных данных и ознакомлен(а) с условиями конфиденциальности.
+          </p>
+        </form>
+      </section>
+      @@include('html/footer.html')
+      <!-- подключение footer отдельной страницей -->
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

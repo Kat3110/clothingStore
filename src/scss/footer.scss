@@ -1,0 +1,131 @@
+.footer {
+  height: max-content;
+  margin-bottom: 10px;
+
+  &__menu {
+    width: 25%;
+  }
+
+  &__list {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #252525;
+  }
+  ul {
+    width: 100%;
+
+    li {
+      font-family: "Raleway-ligth";
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 19px;
+      color: #252525;
+      margin-bottom: 10px;
+      display: flex;
+      a {
+        color: #252525;
+        cursor: pointer;
+        div {
+          margin-right: 10px;
+        }
+      }
+    }
+    li:nth-child(1) {
+      margin-top: 20px;
+    }
+  }
+  span {
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #252525;
+    display: flex;
+    justify-content: center;
+  }
+}
+.footer a:hover {
+  color: #e0bea2;
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 782px) {
+  .footer {
+    &__list {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 17px;
+      line-height: 21px;
+    }
+
+    ul {
+      li {
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 590px) {
+  .footer {
+    margin-bottom: 5px;
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__menu {
+      width: 335px;
+
+      h2 {
+        border-bottom: 0.3px solid #252525;
+        position: relative;
+        font-size: 18px;
+        line-height: 21px;
+        padding-bottom: 5px;
+        margin-top: 20px;
+      }
+
+      ul {
+        display: none;
+      }
+      li {
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 16px;
+        justify-content: center;
+      }
+
+      .visible {
+        display: block;
+      }
+    }
+    &__menu h2::after {
+      content: " ";
+      width: 14px;
+      height: 14px;
+      -webkit-mask-image: url(../img/arrow.svg);
+      -webkit-mask-position: center;
+      -webkit-mask-size: 90%;
+      mask-image: url(../img/arrow.svg);
+      mask-position: center;
+      mask-size: 90%;
+      background: #e0bea2;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      position: absolute;
+      right: 14px;
+      top: 4px;
+    }
+  }
+}

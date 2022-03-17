@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ 'title': 'Оплата' })
+
+  <body>
+    <div class="page menu__two">
+      @@include('html/header.html')<!-- подключение header отдельной страницей -->
+      <section class="breadcrumb container">
+        <ul class="breadcrumb__item">
+          <li><a href="index.html">Главная</a></li>
+          <li>Обмен и возврат</li>
+        </ul>
+      </section>
+      <section class="description container returnswap">
+        <div class="description__box">
+          <h2 class="description__subtitle">Обмен и возврат</h2>
+          <p>
+            Если вам не подошел заказ, мы с удовольствием вам его обменяем или
+            примем возврат
+          </p>
+          <p>Обмен и возврат возможен в случае :</p>
+        </div>
+        <ul class="description__list">
+          <li>
+            <img src="@img/descr1.svg" alt="." />
+            если заказ не был использован и сохранил товарный вид(в том числе не
+            нарушены бирки, ярлыки, упаковочные материалы)
+          </li>
+          <li>
+            <img src="@img/descr6.svg" alt="." />
+            возврат и обмен осуществляется в течение двух дней с момента
+            получения заказа
+          </li>
+          <li>
+            <img src="@img/descr5.svg" alt="." />
+            возврат и обмен товара возможен только при отправке по Украине
+          </li>
+          <li>
+            <img src="@img/descr4.svg" alt="." />
+            бланк возврата присутствует в каждой посылке
+          </li>
+          <li>
+            <img src="@img/descr3.svg" alt="." />
+            все расходы по обмену и возврату товара несет покупатель
+          </li>
+          <li>
+            <img src="@img/descr2.svg" alt="." />
+            после получения возврата мы делаем перевод денежных средств на карту
+            клиента
+          </li>
+        </ul>
+      </section>
+      @@include('html/footer.html')<!-- подключение footer отдельной страницей -->
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
