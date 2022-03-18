@@ -2,7 +2,6 @@
 @import "header";
 @import "footer";
 @import "new";
-@import "category";
 @import "distribution";
 @import "breadcrumb";
 @import "description";
@@ -15,12 +14,12 @@
   text-decoration: none;
   border: none;
 }
-picture {
-  margin: 0;
-}
 *::before,
 *::after {
   box-sizing: border-box;
+}
+picture {
+  margin: 0;
 }
 button {
   cursor: pointer;
