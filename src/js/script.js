@@ -45,7 +45,15 @@ const divClassPage = document.getElementsByClassName("page")[0];
 
 if (!divClassPage.classList.contains("menu__two")) {
   let position = 0;
-  const slidesToShow = 4;
+  let slidesToShow = 4;
+  let screenWidth = window.screen.width;
+
+  if (screenWidth > 820) {
+    slidesToShow = 4;
+  } else if (screenWidth < 820) {
+    slidesToShow = 2;
+  }
+
   const slidesToScroll = 1;
   const container = document.querySelector(".slider-container");
   const track = document.querySelector(".slider-track");
@@ -53,10 +61,12 @@ if (!divClassPage.classList.contains("menu__two")) {
   const btnNext = document.querySelector(".btn-next");
   const items = document.querySelectorAll(".slider-item");
   const itemsCount = items.length;
-  const itemWidth = container.clientWidth / slidesToShow;
+  let itemWidth = container.clientWidth / slidesToShow;
   const movePosition = slidesToScroll * itemWidth;
 
+  console.log(itemWidth);
   items.forEach((item) => {
+    item.style.maxWidth = `${itemWidth}px`;
     item.style.minWidth = `${itemWidth}px`;
   });
 
@@ -93,4 +103,11 @@ if (!divClassPage.classList.contains("menu__two")) {
   };
 
   checkBtns();
+
+  // // Создаем медиа условие, проверяющее viewports на ширину не менее 768 пикселей.
+  // const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+  // if (mediaQuery.matches) {
+  //   alert("Media Query Matched!");
+  // }
 }
