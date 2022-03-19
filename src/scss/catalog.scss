@@ -1,5 +1,7 @@
 .catalog {
   margin: 0 auto 100px;
+  display: flex;
+  justify-content: space-between;
   &__block_one {
     width: 150px;
     height: max-content;
@@ -10,6 +12,7 @@
   &__list {
     @include font-text;
     font-weight: $weight-300;
+    display: block;
     li {
       margin-bottom: 20px;
     }
@@ -18,15 +21,52 @@
     width: 960px;
     height: max-content;
   }
+  &__block_two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .product-card {
   width: 310px;
   height: 461px;
+  position: relative;
+  margin-bottom: 30px;
+
+  &__like {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 0px 0px 0px 20px;
+    background: $beige;
+
+    &_mask {
+      mask-image: url(#{$imgPath}like.svg);
+      mask-repeat: no-repeat;
+      mask-position: 11px 9px;
+      -webkit-mask-image: url(#{$imgPath}like.svg);
+      -webkit-mask-position: 11px 9px;
+      -webkit-mask-repeat: no-repeat;
+      background-color: $white;
+      mask-size: 50%;
+      -webkit-mask-size: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+    &_mask:hover {
+      background-color: $darkGrey;
+      transition: background-color 0.3s ease;
+    }
+  }
+
   &__img {
     width: 310px;
     max-height: 360px;
     object-fit: cover;
+    object-position: 0 77%;
   }
   &__box {
     height: max-content;
@@ -36,13 +76,7 @@
   &__subtitle {
     @include font-subtitle;
     margin-bottom: 5px;
-  }
-  &__subtitle::after {
-    content: "new";
-    display: inline-block;
-    @include font-text;
-    color: $beige;
-    margin-left: 10px;
+    position: relative;
   }
   &__price {
     @include font-text;
@@ -81,6 +115,110 @@
     &_yellow {
       background: #f1ddaa;
       border: 0.3px solid #f1ddaa;
+    }
+  }
+  &:nth-of-type(1) .product-card__subtitle::after,
+  &:nth-of-type(4) .product-card__subtitle::after,
+  &:nth-of-type(5) .product-card__subtitle::after,
+  &:nth-of-type(7) .product-card__subtitle::after,
+  &:nth-of-type(10) .product-card__subtitle::after,
+  &:nth-of-type(11) .product-card__subtitle::after {
+    content: "new";
+    @include font-text;
+    line-height: 23px;
+    color: $beige;
+    margin-left: 10px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .catalog__block_two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .catalog__block_two {
+    justify-items: end;
+  }
+  .product-card {
+    width: 240px;
+    height: 401px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &__img {
+      width: 240px;
+      max-height: 300px;
+    }
+    &__box {
+      width: 240px;
+    }
+    &__list {
+      @include font-text;
+      display: flex;
+      justify-content: space-between;
+      width: 105px;
+      color: rgba(37, 37, 37, 0.5);
+      font-weight: 300;
+      margin: 0 auto 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .catalog {
+    margin: 0 auto 100px;
+    flex-direction: column;
+
+    &__block_one {
+      width: 100%;
+      height: max-content;
+    }
+    &__sudtitle {
+      width: 100%;
+      height: 20px;
+      background: $beige;
+      color: white;
+      text-align: center;
+      font-size: 28px;
+      line-height: 21px;
+      padding: 10px 0 10px;
+      position: relative;
+    }
+    &__sudtitle::after {
+      content: " ";
+      position: absolute;
+      background: transparent url(#{$imgPath}arrow.svg) no-repeat 7px 7px;
+      background-size: 52%;
+      width: 29px;
+      height: 19px;
+    }
+    &__list {
+      font-size: 28px;
+      line-height: 21px;
+      font-weight: $weight-300;
+      background: $white;
+      color: $white;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-around;
+      justify-items: start;
+
+      li {
+        margin-bottom: 20px;
+      }
+    }
+    &__block_two {
+      width: 100%;
+      height: max-content;
+    }
+    &__block_two {
+      grid-template-columns: repeat(2, auto);
+      justify-items: center;
     }
   }
 }

@@ -1337,6 +1337,8 @@
 
 .catalog {
   margin: 0 auto 100px;
+  display: flex;
+  justify-content: space-between;
 }
 .catalog__block_one {
   width: 150px;
@@ -1353,6 +1355,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
+  display: block;
 }
 .catalog__list li {
   margin-bottom: 20px;
@@ -1361,15 +1364,49 @@
   width: 960px;
   height: max-content;
 }
+.catalog__block_two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .product-card {
   width: 310px;
   height: 461px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.product-card__like {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px 0px 0px 20px;
+  background: #e0bea2;
+}
+.product-card__like_mask {
+  mask-image: url(../img/like.svg);
+  mask-repeat: no-repeat;
+  mask-position: 11px 9px;
+  -webkit-mask-image: url(../img/like.svg);
+  -webkit-mask-position: 11px 9px;
+  -webkit-mask-repeat: no-repeat;
+  background-color: #fff;
+  mask-size: 50%;
+  -webkit-mask-size: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.product-card__like_mask:hover {
+  background-color: #252525;
+  transition: background-color 0.3s ease;
 }
 .product-card__img {
   width: 310px;
   max-height: 360px;
   object-fit: cover;
+  object-position: 0 77%;
 }
 .product-card__box {
   height: max-content;
@@ -1383,14 +1420,7 @@
   line-height: 23px;
   margin-bottom: 30px;
   margin-bottom: 5px;
-}
-.product-card__subtitle::after {
-  content: "new";
-  display: inline-block;
-  font-size: 16px;
-  line-height: 20px;
-  color: #e0bea2;
-  margin-left: 10px;
+  position: relative;
 }
 .product-card__price {
   font-size: 16px;
@@ -1433,7 +1463,103 @@
   background: #f1ddaa;
   border: 0.3px solid #f1ddaa;
 }
+.product-card:nth-of-type(1) .product-card__subtitle::after, .product-card:nth-of-type(4) .product-card__subtitle::after, .product-card:nth-of-type(5) .product-card__subtitle::after, .product-card:nth-of-type(7) .product-card__subtitle::after, .product-card:nth-of-type(10) .product-card__subtitle::after, .product-card:nth-of-type(11) .product-card__subtitle::after {
+  content: "new";
+  font-size: 16px;
+  line-height: 20px;
+  line-height: 23px;
+  color: #e0bea2;
+  margin-left: 10px;
+  position: absolute;
+}
 
+@media screen and (max-width: 1260px) {
+  .catalog__block_two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 920px) {
+  .catalog__block_two {
+    justify-items: end;
+  }
+
+  .product-card {
+    width: 240px;
+    height: 401px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .product-card__img {
+    width: 240px;
+    max-height: 300px;
+  }
+  .product-card__box {
+    width: 240px;
+  }
+  .product-card__list {
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 105px;
+    color: rgba(37, 37, 37, 0.5);
+    font-weight: 300;
+    margin: 0 auto 5px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .catalog {
+    margin: 0 auto 100px;
+    flex-direction: column;
+  }
+  .catalog__block_one {
+    width: 100%;
+    height: max-content;
+  }
+  .catalog__sudtitle {
+    width: 100%;
+    height: 20px;
+    background: #e0bea2;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    line-height: 21px;
+    padding: 10px 0 10px;
+    position: relative;
+  }
+  .catalog__sudtitle::after {
+    content: " ";
+    position: absolute;
+    background: transparent url(../img/arrow.svg) no-repeat 7px 7px;
+    background-size: 52%;
+    width: 29px;
+    height: 19px;
+  }
+  .catalog__list {
+    font-size: 28px;
+    line-height: 21px;
+    font-weight: 300;
+    background: #fff;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+    justify-items: start;
+  }
+  .catalog__list li {
+    margin-bottom: 20px;
+  }
+  .catalog__block_two {
+    width: 100%;
+    height: max-content;
+  }
+  .catalog__block_two {
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+  }
+}
 * {
   padding: 0;
   margin: 0;
