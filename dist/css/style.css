@@ -12,6 +12,20 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: raleway;
+  font-display: swap;
+  src: url("../fonts/raleway-medium.woff2") format("woff2"), url("../fonts/raleway-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: raleway;
+  font-display: swap;
+  src: url("../fonts/raleway-regular.woff2") format("woff2"), url("../fonts/raleway-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 .header .active {
   position: absolute;
   background: #fff;
@@ -1233,6 +1247,79 @@
     height: 25px;
   }
 }
+.confidentiality {
+  margin: 20px auto 100px !important;
+}
+.confidentiality__subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.confidentiality__list {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.confidentiality__list li {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 20px;
+  text-transform: none;
+}
+
+.loyalty {
+  margin: 30px auto 100px !important;
+}
+.loyalty__title {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+.loyalty__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.loyalty__box span {
+  font-weight: 200;
+  font-size: 19px;
+}
+.loyalty__box p {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+}
+.loyalty__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+
+.about {
+  margin: 30px auto 100px !important;
+}
+.about__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+.about p {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+}
+.about p:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -1257,7 +1344,7 @@ button {
 
 .page {
   width: 100%;
-  font-family: "Raleway";
+  font-family: "raleway";
   margin: 0 auto;
   overflow: hidden;
   position: relative;

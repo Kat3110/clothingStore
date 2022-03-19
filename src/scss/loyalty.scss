@@ -1,0 +1,31 @@
+.loyalty {
+  margin: 30px auto 100px !important;
+
+  &__title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 30px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    span {
+      font-weight: 200;
+      font-size: 19px;
+    }
+    p {
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+}

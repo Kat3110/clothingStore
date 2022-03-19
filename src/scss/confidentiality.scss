@@ -1,0 +1,24 @@
+.confidentiality {
+  margin: 20px auto 100px !important;
+  &__subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  &__list {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    li {
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 20px;
+      text-transform: none;
+    }
+  }
+}

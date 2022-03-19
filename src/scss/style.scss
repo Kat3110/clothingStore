@@ -12,6 +12,9 @@ $darkGrey: #252525;
 @import "description";
 @import "slider";
 @import "connection";
+@import "confidentiality";
+@import "loyalty";
+@import "about";
 
 * {
   padding: 0;
@@ -33,7 +36,7 @@ button {
 }
 .page {
   width: 100%;
-  font-family: "Raleway";
+  font-family: "raleway";
   margin: 0 auto;
   overflow: hidden;
   position: relative;

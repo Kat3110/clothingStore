@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html',{ 'title': 'Бонусная система' })
+
+  <body>
+    <div class="page menu__two">
+      @@include('html/header.html')
+      <section class="breadcrumb container">
+        <ul class="breadcrumb__item">
+          <li><a href="index.html">Главная</a></li>
+          <li>Бонусная система</li>
+        </ul>
+      </section>
+
+      <section class="loyalty container">
+        <h2 class="loyalty__title">
+          Подпишись и получи скидку 5% при оплате заказа онлайн
+        </h2>
+        <div class="loyalty__box">
+          <h3 class="loyalty__subtitle">Базовый</h3>
+          <p>Скидка 10%</p>
+          <p>Совершить покупки на общую сумму от 10000 руб.</p>
+        </div>
+        <div class="loyalty__box">
+          <h3 class="loyalty__subtitle">Продвинутый</h3>
+          <p>Скидка 15%</p>
+          <p>Совершить покупки на общую сумму от 18000 руб</p>
+        </div>
+        <div class="loyalty__box">
+          <h3 class="loyalty__subtitle">Наш человек</h3>
+          <p>Скидка 20%</p>
+          <p>Совершить покупки на общую сумму от 40000 руб</p>
+        </div>
+      </section>
+      @@include('html/distribution.html') @@include('html/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

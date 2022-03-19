@@ -1,0 +1,17 @@
+.about {
+  margin: 30px auto 100px !important;
+  &__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  p:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+}
