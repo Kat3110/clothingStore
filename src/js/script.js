@@ -11,9 +11,9 @@ for (let i = 0; i < toggleMenu.length; i++) {
     }
   });
 }
-function f(a) {
-  a.value = "Вы подписались";
-}
+// function f(a) {
+//   a.value = "Вы подписались";
+// }
 
 let burger = document.querySelector(".header__menu_burger");
 let active = document.querySelector(".active");

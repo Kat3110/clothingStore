@@ -1,3 +1,8 @@
+$imgPath: "../img/";
+$beige: #e0bea2;
+$white: #fff;
+$darkGrey: #252525;
+
 @import "fonts";
 @import "header";
 @import "footer";
@@ -41,7 +46,7 @@ button {
   position: absolute;
   width: 1440px;
   height: 900px;
-  background: transparent url(@img/bcg.png) no-repeat center 0;
+  background: transparent url(#{$imgPath}/bcg.png) no-repeat center 0;
   top: 0;
   left: 50%;
   margin-left: -720px;
@@ -49,14 +54,14 @@ button {
 }
 @media screen and (max-width: 920px) {
   .backgraund {
-    background: transparent url(@img/bcg2.png) no-repeat center 0;
+    background: transparent url(#{$imgPath}/bcg2.png) no-repeat center 0;
     width: 920px;
     margin-left: -460px;
   }
 }
 @media screen and (max-width: 570px) {
   .backgraund {
-    background: transparent url(@img/bc1.png) no-repeat center 0;
+    background: transparent url(#{$imgPath}/bc1.png) no-repeat center 0;
     height: 667px;
     background-size: 55% !important;
   }

@@ -5,18 +5,18 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
-    color: #252525;
+    color: $darkGrey;
   }
   &__item li::after {
     content: " ";
     position: absolute;
-    -webkit-mask-image: url(../img/arrow.svg);
+    -webkit-mask-image: url(#{$imgPath}arrow.svg);
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    mask-image: url(../img/arrow.svg);
+    mask-image: url(#{$imgPath}arrow.svg);
     mask-position: center;
     mask-repeat: no-repeat;
-    background-color: #e0bea2;
+    background-color: $beige;
     width: 18px;
     height: 18px;
     right: -24px;

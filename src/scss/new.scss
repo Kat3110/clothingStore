@@ -10,7 +10,7 @@
     font-size: 46px;
     line-height: 54px;
     text-align: center;
-    color: #fff;
+    color: $white;
     opacity: 0.85;
     width: max-content;
   }
@@ -26,28 +26,28 @@
     line-height: 19px;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: $white;
     width: max-content;
     a {
-      color: #fff;
+      color: $white;
     }
   }
   &__text::after {
     content: " ";
     display: inline-block;
-    background: transparent url(../img/arrow.svg) no-repeat 1px center;
+    background: transparent url(#{$imgPath}arrow.svg) no-repeat 1px center;
     transform: rotate(-90deg);
     width: 18px;
     height: 18px;
   }
   &__text:hover:after {
-    -webkit-mask-image: url(../img/arrow.svg);
+    -webkit-mask-image: url(#{$imgPath}arrow.svg);
     -webkit-mask-position: 1px center;
     -webkit-mask-repeat: no-repeat;
-    mask-image: url(../img/arrow.svg);
+    mask-image: url(#{$imgPath}arrow.svg);
     mask-position: 1px center;
     mask-repeat: no-repeat;
-    background: #e0bea2;
+    // background: $beige;
     width: 18px;
     height: 18px;
   }

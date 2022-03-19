@@ -20,13 +20,13 @@
     font-size: 20px;
     line-height: 23px;
     text-align: center;
-    color: #ffffff;
+    color: $white;
     position: relative;
     width: 100%;
     display: block;
     img {
       width: 98%;
-      height: 46.906vw;
+      height: 31.25vw;
       display: block;
       object-fit: cover;
       margin: 0 auto;
@@ -55,14 +55,14 @@
     font-weight: 300;
     font-size: 36px;
     line-height: 42px;
-    color: #252525;
+    color: $darkGrey;
     margin: 0 0 50px;
   }
   .btn {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: #e0bea2;
+    background-color: $beige;
     top: 50%;
     right: 20px;
   }
@@ -72,12 +72,12 @@
   }
 }
 .btn-next {
-  background: transparent url(../img/arrow.svg) no-repeat center;
+  background: transparent url(#{$imgPath}arrow.svg) no-repeat center;
   background-size: 65%;
   transform: rotate(-90deg);
 }
 .btn-prev {
-  background: transparent url(../img/arrow.svg) no-repeat center;
+  background: transparent url(#{$imgPath}arrow.svg) no-repeat center;
   background-size: 65%;
   transform: rotate(90deg);
 }
@@ -117,7 +117,15 @@
     }
   }
 }
-
+@media screen and (max-width: 570px) {
+  .slider .btn {
+    width: 30px;
+    height: 30px;
+  }
+  .btn-next {
+    background-size: 63%;
+  }
+}
 @media screen and (max-width: 376px) {
   .slider-item {
     a {

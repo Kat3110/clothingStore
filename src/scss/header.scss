@@ -1,7 +1,7 @@
 .header {
   .active {
     position: absolute;
-    background: #ffffff;
+    background: $white;
     box-shadow: 0px 10px 15px rgba(37, 37, 37, 0.07);
     top: 43px;
     left: -150px;
@@ -13,11 +13,10 @@
   &__menu {
     height: 40px;
     padding: 24px 0 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 4% 29% 33% 33%;
     align-items: center;
+    justify-items: center;
     button {
       position: relative;
     }
@@ -36,7 +35,7 @@
       font-weight: 300;
       font-size: 18px;
       line-height: 21px;
-      color: #252525;
+      color: $darkGrey;
       text-transform: uppercase;
     }
     .svg {
@@ -44,14 +43,14 @@
       -webkit-mask-repeat: no-repeat;
       mask-position: center;
       mask-repeat: no-repeat;
-      background-color: #fff;
+      background-color: $white;
       cursor: pointer;
       width: 25px;
       height: 25px;
     }
     &_burger {
-      -webkit-mask-image: url(../img/burger.svg);
-      mask-image: url(../img/burger.svg);
+      -webkit-mask-image: url(#{$imgPath}burger.svg);
+      mask-image: url(#{$imgPath}burger.svg);
       width: 35px !important;
       height: 24px;
       position: relative;
@@ -68,16 +67,17 @@
     }
 
     &_link {
-      width: 286px;
+      width: 260px;
       font-weight: 300;
       font-size: 18px;
       line-height: 21px;
       text-transform: uppercase;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      justify-self: end;
 
       a {
-        color: #fff;
+        color: $white;
       }
       a:hover {
         opacity: 0.7;
@@ -87,92 +87,37 @@
     &_logo {
       width: 158px;
       height: 40px;
-      background: transparent url(../img/YANKI.svg) no-repeat center;
-    }
-    &_box {
-      display: flex;
-      justify-content: space-around;
-      width: 140px;
-      height: 21px;
-    }
-    &_language {
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 21px;
-      color: #fff;
-      text-transform: uppercase;
-      cursor: pointer;
-      position: relative;
-      display: inline-block;
-    }
-    &_language::after {
-      content: " ";
-      display: inline-block;
-      -webkit-mask-position: 8px 8px;
-      -webkit-mask-repeat: no-repeat;
-      background-color: #fff;
-      cursor: pointer;
-      -webkit-mask-image: url(../img/arrow.svg);
-      width: 18px;
-      height: 18px;
-      mask-position: 8px 8px;
-      mask-repeat: no-repeat;
-      mask-image: url(../img/arrow.svg);
+      background: transparent url(#{$imgPath}YANKI.svg) no-repeat center;
     }
 
-    &_language-active {
-      display: none;
-      position: absolute;
-      background: transparent;
-      min-width: 58px;
-    }
-
-    &_language-active li {
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 21px;
-      color: #fff;
-      display: block;
-      border-top: 1px solid #e0bea2;
-      text-align: center;
-      margin-top: 2px;
-      padding-top: 3px;
-    }
-    &_language-active li:hover {
-      opacity: 0.7;
-      transform: 0.3s ease;
-    }
-
-    &_language:hover .header__menu_language-active {
-      display: block;
-    }
     &_icon {
       display: flex;
       justify-content: space-between;
       width: 184px;
+      justify-self: end;
 
       &_loupe {
-        -webkit-mask-image: url(../img/loupe.svg);
-        mask-image: url(../img/loupe.svg);
+        -webkit-mask-image: url(#{$imgPath}loupe.svg);
+        mask-image: url(#{$imgPath}loupe.svg);
         width: 25px;
         height: 25px;
       }
 
       &_frame {
-        -webkit-mask-image: url(../img/Frame.svg);
-        mask-image: url(../img/Frame.svg);
+        -webkit-mask-image: url(#{$imgPath}Frame.svg);
+        mask-image: url(#{$imgPath}Frame.svg);
         width: 25px;
         height: 25px;
       }
       &_like {
-        -webkit-mask-image: url(../img/like.svg);
-        mask-image: url(../img/like.svg);
+        -webkit-mask-image: url(#{$imgPath}like.svg);
+        mask-image: url(#{$imgPath}like.svg);
         width: 25px;
         height: 25px;
       }
       &_basket {
-        mask-image: url(../img/basket.svg);
-        -webkit-mask-image: url(../img/basket.svg);
+        mask-image: url(#{$imgPath}basket.svg);
+        -webkit-mask-image: url(#{$imgPath}basket.svg);
         width: 25px;
         height: 25px;
       }
@@ -183,6 +128,11 @@
   color: #000;
 }
 @media screen and (max-width: 920px) {
+  .header__menu_link {
+    width: 210px;
+  }
+}
+@media screen and (max-width: 920px) {
   .header {
     &__menu {
       padding: 20px 0 0;
@@ -190,20 +140,6 @@
       &_link {
         width: 200px;
         font-size: 15px;
-      }
-      &_box {
-        width: 120px;
-        height: 21px;
-      }
-      &_language {
-        font-size: 15px;
-        line-height: 21px;
-      }
-      &_language::after {
-        -webkit-mask-position: 4px 6px;
-        mask-position: 4px 6px;
-        width: 15px;
-        height: 15px;
       }
       &_icon {
         width: 175px;
@@ -219,6 +155,7 @@
 @media screen and (max-width: 782px) {
   .header {
     &__menu {
+      grid-template-columns: 6% 76% 18%;
       .svg {
         -webkit-mask-size: 80%;
         mask-size: 80%;
@@ -234,19 +171,6 @@
         width: 140px;
         background-size: 90%;
       }
-      &_box {
-        width: 85px;
-      }
-      &_language {
-        font-size: 15px;
-        line-height: 19px;
-      }
-      &_language::after {
-        -webkit-mask-position: 1px 7px;
-        -webkit-mask-size: 50%;
-        mask-position: 1px 7px;
-        mask-size: 50%;
-      }
       &_icon {
         width: 120px;
       }
@@ -261,6 +185,7 @@
     align-items: end;
 
     &__menu {
+      grid-template-columns: 8% 35% 19%;
       padding: 20px 0 0;
 
       .svg {
@@ -285,28 +210,6 @@
         grid-row-start: 0;
         grid-row-end: 1;
       }
-      &_box {
-        width: 60px;
-        height: 21px;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 0;
-        grid-row-end: 1;
-      }
-      &_language {
-        font-size: 16px;
-      }
-      &_language:last-child {
-        display: none;
-      }
-      &_language::after {
-        -webkit-mask-position: 4px 7px;
-        -webkit-mask-image: url(../img/arrow.svg);
-        mask-position: 4px 7px;
-        mask-image: url(../img/arrow.svg);
-        -webkit-mask-size: 60%;
-        mask-size: 60%;
-      }
       &_icon {
         width: 63px;
         grid-column-start: 4;
@@ -324,35 +227,21 @@
     }
   }
   .menu__two .header__menu_logo {
-    width: 130px;
-    height: 20px;
-    background-size: 80%;
+    background: transparent url(#{$imgPath}YANKI2.svg) no-repeat center !important;
+    background-size: 74% !important;
+    width: 195px !important;
+    height: 30px !important;
   }
 }
 @media screen and (max-width: 376px) {
   .header {
     &__menu {
       height: 24px;
-
       padding: 25px 0 0;
 
       .svg {
-        width: 22px;
-        height: 22px;
-      }
-      &_box {
-        width: 42px;
-        height: 20px;
-      }
-      &_language {
-        font-size: 16px;
-        line-height: 19px;
-      }
-      &_language::after {
-        -webkit-mask-position: 5px 6px;
-        mask-position: 5px 6px;
-        width: 14px;
-        height: 14px;
+        width: 22px !important;
+        height: 22px !important;
       }
     }
   }
@@ -368,33 +257,24 @@
 .menu__two .header__menu_icon_frame,
 .menu__two .header__menu_icon_like,
 .menu__two .header__menu_icon_basket {
-  background-color: #e0bea2;
-  transition: background-color 0.3s ease;
-}
-
-.menu__two .header__menu_language::after {
-  background-color: #252525;
+  background-color: $beige;
   transition: background-color 0.3s ease;
 }
 .menu__two .svg:hover {
-  background-color: #252525;
+  background-color: $darkGrey;
 }
 .menu__two .header__menu_logo {
-  background: transparent url(../img/YANKI2.svg) no-repeat center;
+  background: transparent url(#{$imgPath}YANKI2.svg) no-repeat center;
   width: 195px;
   height: 40px;
 }
 .menu__two a {
-  color: #252525;
+  color: $darkGrey;
 }
 .menu__two a:hover {
-  color: #e0bea2;
+  color: $beige;
   transition: 0.3s ease;
 }
-.menu__two .header__menu_language {
-  color: #252525;
-}
-
 .menu__two {
   background: none;
 }
@@ -425,13 +305,13 @@
   .header__menu .header__menu_burger-active li a {
     font-size: 18px;
     line-height: 20px;
-    color: #fff;
+    color: $white;
   }
   .menu__two .header__menu_burger-active li a {
     color: rgb(0, 0, 0);
   }
   .menu__two .active {
     color: rgb(0, 0, 0);
-    background: #fff;
+    background: $white;
   }
 }
