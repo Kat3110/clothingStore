@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html',{ 'title': 'Коталог' })
+
+  <body>
+    <div class="page menu__two">
+      @@include('html/header.html')
+      <section class="breadcrumb container">
+        <ul class="breadcrumb__item">
+          <li><a href="index.html">Главная</a></li>
+          <li>Коталог</li>
+        </ul>
+      </section>
+
+      <section class="catalog container">
+        <div class="catalog__block_one">
+          <h2 class="catalog__sudtitle">Каталог</h2>
+          <ul class="catalog__list">
+            <li><a href="">New</a></li>
+            <li><a href="">Bestsellers</a></li>
+            <li><a href="">Верхняя одежда</a></li>
+            <li><a href="">Шубы</a></li>
+            <li><a href="">Тренчи</a></li>
+            <li><a href="">Пальто</a></li>
+            <li><a href="">Пуховики и жилеты</a></li>
+            <li><a href="">Костюмы</a></li>
+            <li><a href="">Жакеты</a></li>
+            <li><a href="">Платья</a></li>
+            <li><a href="">Рубашки и блузы</a></li>
+            <li><a href="">Юбки</a></li>
+            <li><a href="">Футболки и топы</a></li>
+            <li><a href="">Аксессуары</a></li>
+            <li><a href="">Sale</a></li>
+            <li><a href="">Summer</a></li>
+            <li><a href="">Посмотреть всё</a></li>
+          </ul>
+        </div>
+        <div class="catalog__block_two">
+          <div class="product-card">
+            <img class="product-card__img" src="img/jackets.png" alt="." />
+            <div class="product-card__box">
+              <h2 class="product-card__subtitle">Белая куртка</h2>
+              <p class="product-card__price">2900 грн</p>
+              <ul class="product-card__list">
+                <li>XXS</li>
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+              </ul>
+              <div class="product-card__option">
+                <span
+                  class="product-card__circul product-card__circul_white"
+                ></span>
+                <span
+                  class="product-card__circul product-card__circul_blue"
+                ></span>
+                <span
+                  class="product-card__circul product-card__circul_yellow"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

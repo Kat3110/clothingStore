@@ -16,9 +16,9 @@
   height: max-content;
 
   a {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 23px;
+    font-weight: $weight-300;
+    font-size: $size-20;
+    line-height: $height-23;
     text-align: center;
     color: $white;
     position: relative;
@@ -48,7 +48,7 @@
   text-align: center;
 }
 .slider {
-  margin: 0 auto 100px !important;
+  margin: 0 auto 100px;
   height: max-content;
 
   &__title {

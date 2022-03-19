@@ -1,12 +1,9 @@
 .connection {
   color: $darkGrey;
-  margin-bottom: 100px !important;
+  margin: 0 auto 100px;
 
   &__subtitle {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 23px;
-    margin-bottom: 30px;
+    @include font-subtitle;
   }
   &__box {
     display: flex;
@@ -15,13 +12,11 @@
   }
   &__list {
     font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
+    @include font-text;
 
     &_item {
       font-weight: 200;
-      font-size: 16px;
-      line-height: 19px;
+      @include font-text;
       margin-top: 20px;
     }
     &_item:first-child {
@@ -34,7 +29,7 @@
 }
 @media screen and (max-width: 782px) {
   .connection {
-    margin-bottom: 80px !important;
+    margin-bottom: 80px;
 
     &__box {
       display: grid;
@@ -48,7 +43,7 @@
 
 @media screen and (max-width: 500px) {
   .connection {
-    margin-bottom: 60px !important;
+    margin-bottom: 60px;
 
     &__subtitle {
       font-size: 18px;

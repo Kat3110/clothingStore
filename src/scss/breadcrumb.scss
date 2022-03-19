@@ -1,10 +1,9 @@
 .breadcrumb {
-  margin: 30px auto !important;
+  margin: 30px auto;
 
   &__item {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
+    font-weight: $weight-300;
+    @include font-text;
     color: $darkGrey;
   }
   &__item li::after {
@@ -35,11 +34,10 @@
 
 @media screen and (max-width: 376px) {
   .breadcrumb {
-    margin: 15px auto 13px !important;
+    margin: 15px auto 13px;
 
     &__item {
-      font-size: 16px;
-      line-height: 22px;
+      @include font-text;
     }
     li {
       margin: 0 24px 0 0;

@@ -21,9 +21,8 @@
     margin: 20px 0;
   }
   &__text {
+    @include font-text;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
     text-align: center;
     text-transform: uppercase;
     color: $white;
@@ -47,7 +46,6 @@
     mask-image: url(#{$imgPath}arrow.svg);
     mask-position: 1px center;
     mask-repeat: no-repeat;
-    // background: $beige;
     width: 18px;
     height: 18px;
   }

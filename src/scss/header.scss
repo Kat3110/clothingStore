@@ -1,4 +1,5 @@
 .header {
+  margin: 0 auto;
   .active {
     position: absolute;
     background: $white;
@@ -33,8 +34,8 @@
     }
     .header__menu_burger-active li a {
       font-weight: 300;
-      font-size: 18px;
-      line-height: 21px;
+      font-size: 16px;
+      line-height: 20px;
       color: $darkGrey;
       text-transform: uppercase;
     }

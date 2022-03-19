@@ -1,3 +1,22 @@
+@mixin font-subtitle {
+  font-weight: $weight-300;
+  font-size: $size-20;
+  color: $darkGrey;
+  line-height: $height-23;
+  margin-bottom: $bottom;
+}
+
+@mixin font-text {
+  font-size: $size-16;
+  line-height: $height-20;
+}
+
+$size-16: 16px;
+$height-20: 20px;
+$bottom: 30px;
+$weight-300: 300;
+$size-20: 20px;
+$height-23: 23px;
 $imgPath: "../img/";
 $beige: #e0bea2;
 $white: #fff;
@@ -15,6 +34,7 @@ $darkGrey: #252525;
 @import "confidentiality";
 @import "loyalty";
 @import "about";
+@import "catalog";
 
 * {
   padding: 0;
@@ -37,7 +57,7 @@ button {
 .page {
   width: 100%;
   font-family: "raleway";
-  margin: 0 auto;
+  margin: auto;
   overflow: hidden;
   position: relative;
 }
@@ -50,7 +70,7 @@ button {
   position: absolute;
   width: 1440px;
   height: 900px;
-  background: transparent url(#{$imgPath}/bcg.png) no-repeat center 0;
+  background: transparent url(#{$imgPath}bcg.png) no-repeat center 0;
   top: 0;
   left: 50%;
   margin-left: -720px;
@@ -58,21 +78,20 @@ button {
 }
 @media screen and (max-width: 920px) {
   .backgraund {
-    background: transparent url(#{$imgPath}/bcg2.png) no-repeat center 0;
+    background: transparent url(#{$imgPath}bcg2.png) no-repeat center 0;
     width: 920px;
     margin-left: -460px;
   }
 }
 @media screen and (max-width: 570px) {
   .backgraund {
-    background: transparent url(#{$imgPath}/bc1.png) no-repeat center 0;
+    background: transparent url(#{$imgPath}bc1.png) no-repeat center 0;
     height: 667px;
     background-size: 55% !important;
   }
 }
 .container {
   width: 1140px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 1160px) {
   .container {

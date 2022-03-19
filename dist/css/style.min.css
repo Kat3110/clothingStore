@@ -1,4 +1,11 @@
 @font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-bold.woff2") format("woff2"), url("../fonts/Raleway-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
   font-family: raleway;
   font-display: swap;
   src: url("../fonts/raleway-extralight.woff2") format("woff2"), url("../fonts/raleway-extralight.woff") format("woff");
@@ -25,6 +32,9 @@
   src: url("../fonts/raleway-regular.woff2") format("woff2"), url("../fonts/raleway-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+}
+.header {
+  margin: 0 auto;
 }
 .header .active {
   position: absolute;
@@ -61,8 +71,8 @@
 }
 .header__menu .header__menu_burger-active li a {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 20px;
   color: #252525;
   text-transform: uppercase;
 }
@@ -342,7 +352,7 @@
 }
 .footer {
   height: max-content;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 .footer__menu {
   width: 25%;
@@ -363,9 +373,9 @@
   width: 100%;
 }
 .footer ul li {
-  font-weight: 200;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
+  font-weight: 200;
   color: #252525;
   margin-bottom: 10px;
   display: flex;
@@ -481,9 +491,9 @@
   margin: 20px 0;
 }
 .new__text {
-  font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -571,24 +581,24 @@
   margin: 0 0 50px;
 }
 .distribution__mail {
+  font-size: 16px;
+  line-height: 20px;
   width: 600px;
   height: 50px;
   border: 0.5px solid #252525;
   box-sizing: border-box;
   text-align: center;
   font-weight: 200;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(37, 37, 37, 0.5);
   margin: 0 0 20px;
 }
 .distribution__button {
+  font-size: 16px;
+  line-height: 20px;
   width: 600px;
   height: 50px;
   background: #e0bea2;
   font-weight: 200;
-  font-size: 16px;
-  line-height: 19px;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -608,9 +618,9 @@
   border: 0.5px solid #e0bea2;
 }
 .distribution__text {
-  font-weight: 200;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
+  font-weight: 200;
   text-align: center;
   color: #252525;
 }
@@ -687,12 +697,12 @@
   }
 }
 .breadcrumb {
-  margin: 30px auto !important;
+  margin: 30px auto;
 }
 .breadcrumb__item {
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   color: #252525;
 }
 .breadcrumb__item li::after {
@@ -722,18 +732,18 @@
 
 @media screen and (max-width: 376px) {
   .breadcrumb {
-    margin: 15px auto 13px !important;
+    margin: 15px auto 13px;
   }
   .breadcrumb__item {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 20px;
   }
   .breadcrumb li {
     margin: 0 24px 0 0;
   }
 }
 .description {
-  margin: 30px auto 269px !important;
+  margin: 30px auto 269px;
   color: #252525;
 }
 
@@ -744,8 +754,9 @@
 .description__subtitle {
   font-weight: 300;
   font-size: 20px;
+  color: #252525;
   line-height: 23px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .description__block {
@@ -929,7 +940,7 @@
 }
 @media screen and (max-width: 570px) {
   .description {
-    margin: 0 auto 36px !important;
+    margin: 0 auto 36px;
   }
 
   .payment .description__subtitle {
@@ -989,7 +1000,7 @@
   .returnswap .description__box p {
     font-weight: 300;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 20px;
     margin-bottom: 17px;
   }
 
@@ -1096,7 +1107,7 @@
 }
 
 .slider {
-  margin: 0 auto 100px !important;
+  margin: 0 auto 100px;
   height: max-content;
 }
 .slider__title {
@@ -1177,11 +1188,12 @@
 }
 .connection {
   color: #252525;
-  margin-bottom: 100px !important;
+  margin: 0 auto 100px;
 }
 .connection__subtitle {
   font-weight: 300;
   font-size: 20px;
+  color: #252525;
   line-height: 23px;
   margin-bottom: 30px;
 }
@@ -1193,12 +1205,12 @@
 .connection__list {
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
 }
 .connection__list_item {
   font-weight: 200;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   margin-top: 20px;
 }
 .connection__list_item:first-child {
@@ -1210,7 +1222,7 @@
 
 @media screen and (max-width: 782px) {
   .connection {
-    margin-bottom: 80px !important;
+    margin-bottom: 80px;
   }
   .connection__box {
     display: grid;
@@ -1222,7 +1234,7 @@
 }
 @media screen and (max-width: 500px) {
   .connection {
-    margin-bottom: 60px !important;
+    margin-bottom: 60px;
   }
   .connection__subtitle {
     font-size: 18px;
@@ -1248,11 +1260,12 @@
   }
 }
 .confidentiality {
-  margin: 20px auto 100px !important;
+  margin: 20px auto 100px;
 }
 .confidentiality__subtitle {
   font-weight: 300;
   font-size: 20px;
+  color: #252525;
   line-height: 23px;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -1260,23 +1273,24 @@
 .confidentiality__list {
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   text-transform: uppercase;
 }
 .confidentiality__list li {
   font-weight: 200;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   margin-top: 20px;
   text-transform: none;
 }
 
 .loyalty {
-  margin: 30px auto 100px !important;
+  margin: 30px auto 100px;
 }
 .loyalty__title {
   font-weight: 300;
   font-size: 20px;
+  color: #252525;
   line-height: 23px;
   margin-bottom: 30px;
 }
@@ -1291,9 +1305,9 @@
   font-size: 19px;
 }
 .loyalty__box p {
-  font-weight: 200;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
+  font-weight: 200;
 }
 .loyalty__subtitle {
   font-weight: 400;
@@ -1303,21 +1317,121 @@
 }
 
 .about {
-  margin: 30px auto 100px !important;
+  margin: 30px auto 100px;
 }
 .about__subtitle {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 20px;
+  color: #252525;
   line-height: 23px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .about p {
   font-weight: 200;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
 }
 .about p:nth-of-type(1) {
   margin-bottom: 20px;
+}
+
+.catalog {
+  margin: 0 auto 100px;
+}
+.catalog__block_one {
+  width: 150px;
+  height: max-content;
+}
+.catalog__sudtitle {
+  font-weight: 300;
+  font-size: 20px;
+  color: #252525;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+.catalog__list {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.catalog__list li {
+  margin-bottom: 20px;
+}
+.catalog__block_two {
+  width: 960px;
+  height: max-content;
+}
+
+.product-card {
+  width: 310px;
+  height: 461px;
+}
+.product-card__img {
+  width: 310px;
+  max-height: 360px;
+  object-fit: cover;
+}
+.product-card__box {
+  height: max-content;
+  width: 310px;
+  text-align: center;
+}
+.product-card__subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  color: #252525;
+  line-height: 23px;
+  margin-bottom: 30px;
+  margin-bottom: 5px;
+}
+.product-card__subtitle::after {
+  content: "new";
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #e0bea2;
+  margin-left: 10px;
+}
+.product-card__price {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.product-card__list {
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 105px;
+  color: rgba(37, 37, 37, 0.5);
+  font-weight: 300;
+  margin: 0 auto 5px;
+}
+.product-card__option {
+  width: 52px;
+  height: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.product-card__circul {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  display: block;
+}
+.product-card__circul_white {
+  background: #ffffff;
+  border: 0.3px solid #252525;
+}
+.product-card__circul_blue {
+  background: #6f83a4;
+  border: 0.3px solid #6f83a4;
+}
+.product-card__circul_yellow {
+  background: #f1ddaa;
+  border: 0.3px solid #f1ddaa;
 }
 
 * {
@@ -1345,7 +1459,7 @@ button {
 .page {
   width: 100%;
   font-family: "raleway";
-  margin: 0 auto;
+  margin: auto;
   overflow: hidden;
   position: relative;
 }
@@ -1359,7 +1473,7 @@ button {
   position: absolute;
   width: 1440px;
   height: 900px;
-  background: transparent url(../img//bcg.png) no-repeat center 0;
+  background: transparent url(../img/bcg.png) no-repeat center 0;
   top: 0;
   left: 50%;
   margin-left: -720px;
@@ -1368,21 +1482,20 @@ button {
 
 @media screen and (max-width: 920px) {
   .backgraund {
-    background: transparent url(../img//bcg2.png) no-repeat center 0;
+    background: transparent url(../img/bcg2.png) no-repeat center 0;
     width: 920px;
     margin-left: -460px;
   }
 }
 @media screen and (max-width: 570px) {
   .backgraund {
-    background: transparent url(../img//bc1.png) no-repeat center 0;
+    background: transparent url(../img/bc1.png) no-repeat center 0;
     height: 667px;
     background-size: 55% !important;
   }
 }
 .container {
   width: 1140px;
-  margin: 0 auto;
 }
 
 @media screen and (max-width: 1160px) {

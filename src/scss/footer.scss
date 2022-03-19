@@ -1,6 +1,6 @@
 .footer {
   height: max-content;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 
   &__menu {
     width: 25%;
@@ -23,9 +23,9 @@
     width: 100%;
 
     li {
+      @include font-text;
       font-weight: 200;
-      font-size: 16px;
-      line-height: 19px;
+
       color: $darkGrey;
       margin-bottom: 10px;
       display: flex;

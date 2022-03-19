@@ -1,11 +1,8 @@
 .loyalty {
-  margin: 30px auto 100px !important;
+  margin: 30px auto 100px;
 
   &__title {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 23px;
-    margin-bottom: 30px;
+    @include font-subtitle;
   }
   &__box {
     display: flex;
@@ -17,9 +14,8 @@
       font-size: 19px;
     }
     p {
+      @include font-text;
       font-weight: 200;
-      font-size: 16px;
-      line-height: 19px;
     }
   }
   &__subtitle {
