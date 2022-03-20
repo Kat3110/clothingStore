@@ -22,19 +22,6 @@ let active = document.querySelector('.active');
 let close = document.querySelector('.close');
 active.style.display = 'none';
 
-catalog.addEventListener('click', function () {
-  if (activeList.style.display === 'none') {
-    activeList.style.display = 'block';
-  } else {
-    activeList.style.display = 'none';
-  }
-});
-document.addEventListener('mousedown', function (e) {
-  if (e.target.closest('.catalog__list') === null) {
-    activeList.style.display = 'none';
-  }
-});
-
 burger.addEventListener('click', function () {
   if (active.style.display === 'none') {
     active.style.display = 'block';
