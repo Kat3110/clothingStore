@@ -1,11 +1,11 @@
 .about {
   margin: 30px auto 100px;
   &__subtitle {
-    @include font-subtitle;
+    @include font-subtitle();
   }
   p {
     font-weight: 200;
-    @include font-text;
+    @include font-text();
   }
   p:nth-of-type(1) {
     margin-bottom: 20px;

@@ -1,27 +1,4 @@
-@mixin font-subtitle {
-  font-weight: $weight-300;
-  font-size: $size-20;
-  color: $darkGrey;
-  line-height: $height-23;
-  margin-bottom: $bottom;
-}
-
-@mixin font-text {
-  font-size: $size-16;
-  line-height: $height-20;
-}
-
-$size-16: 16px;
-$height-20: 20px;
-$bottom: 30px;
-$weight-300: 300;
-$size-20: 20px;
-$height-23: 23px;
-$imgPath: "../img/";
-$beige: #e0bea2;
-$white: #fff;
-$darkGrey: #252525;
-
+@import "mixins";
 @import "fonts";
 @import "header";
 @import "footer";
