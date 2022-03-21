@@ -110,3 +110,256 @@ if (!divClassPage.classList.contains('menu__two')) {
 
   checkBtns();
 }
+
+///////////////
+
+let cardsData = [
+  {
+    isAvailable: true,
+    imgUrl: 'img/jackets.png',
+    text: 'Белая куртка',
+    price: 2900,
+    currency: 'грн',
+    size: 'XXS XS S M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/coat.png',
+    text: 'Синее пальто',
+    price: 3150,
+    currency: 'грн',
+    size: 'XS M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/FurCoats.png',
+    text: 'Бежевая шуба',
+    price: 4200,
+    currency: 'грн',
+    size: 'XS M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/parks.png',
+    text: 'Синяя парка',
+    price: 2900,
+    currency: 'грн',
+    size: 'XXS XS S M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/jackets.png',
+    text: 'Белая куртка',
+    price: 2900,
+    currency: 'грн',
+    size: 'XXS XS S M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/coat.png',
+    text: 'Синее пальто',
+    price: 3150,
+    currency: 'грн',
+    size: 'XS M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/jackets.png',
+    text: 'Белая куртка',
+    price: 2900,
+    currency: 'грн',
+    size: 'XXS XS S M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/coat.png',
+    text: 'Синее пальто',
+    price: 3150,
+    currency: 'грн',
+    size: 'XS M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/FurCoats.png',
+    text: 'Бежевая шуба',
+    price: 4200,
+    currency: 'грн',
+    size: 'XS M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/parks.png',
+    text: 'Синяя парка',
+    price: 2900,
+    currency: 'грн',
+    size: 'XXS XS S M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/jackets.png',
+    text: 'Белая куртка',
+    price: 2900,
+    currency: 'грн',
+    size: 'XXS XS S M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+
+  {
+    isAvailable: true,
+    imgUrl: 'img/coat.png',
+    text: 'Синее пальто',
+    price: 3150,
+    currency: 'грн',
+    size: 'XS M L',
+    color: {
+      white: '#fff',
+      blue: '#6F83A4',
+      yellow: '#F1DDAA',
+    },
+    isSpecial: false,
+  },
+];
+
+let makeElement = (tagName, className, text) => {
+  let element = document.createElement(tagName);
+  element.classList.add(className);
+  if (text) {
+    element.textContent = text;
+  }
+  return element;
+};
+
+let catalogBlockTwo = document.getElementsByClassName('catalog__block_two');
+
+let createCard = (product) => {
+  let listItem = makeElement('div', 'product-card');
+
+  let productCardLike = makeElement('div', 'product-card__like', '');
+  listItem.appendChild(productCardLike);
+
+  let productCardLikeMask = makeElement('div', 'product-card__like_mask', '');
+  productCardLike.appendChild(productCardLikeMask);
+
+  let productPicture = makeElement('img', 'product-card__img');
+  productPicture.src = product.imgUrl;
+  productPicture.alt = product.text;
+  listItem.appendChild(productPicture);
+
+  let productCardBox = makeElement('div', 'product-card__box', '');
+  listItem.appendChild(productCardBox);
+
+  let productTitle = makeElement('h2', 'product-card__subtitle', product.text);
+  productCardBox.appendChild(productTitle);
+
+  let productPrice = makeElement(
+    'p',
+    'product-card__price',
+    product.price + ' ' + product.currency
+  );
+  productCardBox.appendChild(productPrice);
+
+  let productSize = makeElement('ul', 'product-card__list', product.size);
+  productCardBox.appendChild(productSize);
+
+  let productColor = makeElement('div', 'product-card__option', '');
+  productCardBox.appendChild(productColor);
+
+  for (let key in product.color) {
+    // если есть выбор цвета делаем цикл
+    let spanProductColor = makeElement('span', 'product-card__circul', '');
+    spanProductColor.style.backgroundColor = product.color[key];
+    if (product.color[key] === '#fff') {
+      spanProductColor.style.border = '0.3px solid #000';
+    } else {
+      spanProductColor.style.border = `0.3px solid ${product.color[key]}`; // делаем бордер цветом фона
+    }
+    productColor.appendChild(spanProductColor);
+  }
+
+  let availabilityClass = 'product--available';
+  if (!product.isAvailable) {
+    availabilityClass = 'product--unavailable';
+  }
+  listItem.classList.add(availabilityClass);
+
+  catalogBlockTwo[0].appendChild(listItem);
+};
+
+for (var i = 0; i < cardsData.length; i++) {
+  var cardItem = createCard(cardsData[i]);
+}
