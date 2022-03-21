@@ -25,8 +25,44 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-}
+  input[type="range"] {
+    overflow: hidden;
+    width: 100px;
+    -webkit-appearance: none;
+    background-color: $beige;
+    border-radius: 50px;
+  }
 
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: $beige;
+    margin-top: -1px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: $darkGrey;
+    box-shadow: -75px 0 0 70px #3366a0;
+    border-radius: 50px;
+  }
+
+  input[type="range"]::-moz-range-progress {
+    background-color: #3366a0;
+  }
+  input[type="range"]::-moz-range-track {
+    background-color: $beige;
+  }
+  input[type="range"]::-ms-fill-lower {
+    background-color: #3366a0;
+  }
+  input[type="range"]::-ms-fill-upper {
+    background-color: $beige;
+  }
+}
 .product-card {
   width: 310px;
   height: 461px;
@@ -203,11 +239,13 @@
       font-weight: $weight-300;
       background: $white;
       color: $white;
-      display: none;
-      // display: grid;
+      display: grid;
       grid-template-columns: repeat(2, auto);
       justify-content: space-around;
       justify-items: start;
+      visibility: hidden;
+      height: 0;
+      opacity: 0;
 
       li {
         margin-bottom: 20px;
@@ -221,6 +259,13 @@
       grid-template-columns: repeat(2, auto);
       justify-items: center;
     }
+  }
+  .visibility {
+    visibility: visible;
+    height: max-content;
+    opacity: 1;
+    transition-property: visibility;
+    transition-delay: 0.15s;
   }
 }
 
@@ -247,19 +292,9 @@
       height: 19px;
     }
     &__list {
-      font-size: 28px;
-      line-height: 21px;
-      font-weight: $weight-300;
-      background: $white;
-      color: $white;
-      display: none;
-      // display: grid;
-      grid-template-columns: repeat(2, auto);
-      justify-content: space-around;
-      justify-items: start;
-
       li {
-        margin-bottom: 20px;
+        @include font-text;
+        margin-bottom: 10px;
       }
     }
     &__block_two {

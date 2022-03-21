@@ -15,21 +15,49 @@ for (let i = 0; i < toggleMenu.length; i++) {
 //   a.value = "Вы подписались";
 // }
 
-let burger = document.querySelector('.header__menu_burger');
-let catalog = document.querySelector('.catalog__sudtitle');
-let activeList = document.querySelector('.catalog__list');
-let active = document.querySelector('.active');
-let close = document.querySelector('.close');
+// function fun1() {
+//   var rng = document.getElementById('r1'); //rng - это ползунок
+//   var i1 = document.getElementById('i1'); // i1 - input
+//   i1.value = rng.value;
+// }
+
+const burger = document.querySelector('.header__menu_burger');
+const catalog = document.querySelector('.catalog__sudtitle');
+const catalogList = document.querySelector('.catalog__list');
+const active = document.querySelector('.active');
+const close = document.querySelector('.close');
+// const catalogFilter = document.querySelector('.catalog__filter');
+// const catalogListOption = document.querySelector('.catalog__list-option');
 active.style.display = 'none';
 
-burger.addEventListener('click', function () {
+// catalogFilter.addEventListener('click', () => {
+//   if (catalogFilter.clientWidth <= 700 && catalogFilter.clientWidth >= 300) {
+//     if (catalogListOption.classList.contains('visibility') === false) {
+//       catalogListOption.classList.add('visibility');
+//     } else {
+//       catalogListOption.classList.remove('visibility');
+//     }
+//   }
+// });
+
+catalog.addEventListener('click', () => {
+  if (catalog.clientWidth <= 700 && catalog.clientWidth >= 300) {
+    if (catalogList.classList.contains('visibility') === false) {
+      catalogList.classList.add('visibility');
+    } else {
+      catalogList.classList.remove('visibility');
+    }
+  }
+});
+
+burger.addEventListener('click', () => {
   if (active.style.display === 'none') {
     active.style.display = 'block';
   } else {
     active.style.display = 'none';
   }
 });
-close.addEventListener('click', function () {
+close.addEventListener('click', () => {
   if (active.style.display === 'none') {
     active.style.display = 'block';
   } else {
@@ -37,7 +65,7 @@ close.addEventListener('click', function () {
   }
 });
 
-document.addEventListener('mousedown', function (e) {
+document.addEventListener('mousedown', (e) => {
   if (e.target.closest('.active') === null) {
     active.style.display = 'none';
   }
@@ -105,11 +133,4 @@ if (!divClassPage.classList.contains('menu__two')) {
   };
 
   checkBtns();
-
-  // // Создаем медиа условие, проверяющее viewports на ширину не менее 768 пикселей.
-  // const mediaQuery = window.matchMedia("(min-width: 768px)");
-
-  // if (mediaQuery.matches) {
-  //   alert("Media Query Matched!");
-  // }
 }
