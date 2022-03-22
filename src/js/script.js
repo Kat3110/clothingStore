@@ -111,7 +111,7 @@ if (!divClassPage.classList.contains('menu__two')) {
   checkBtns();
 }
 
-///////////////
+/// добавленеи карточек товара
 
 let cardsData = [
   {

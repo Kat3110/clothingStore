@@ -25,42 +25,46 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  input[type="range"] {
-    overflow: hidden;
-    width: 100px;
-    -webkit-appearance: none;
-    background-color: $beige;
-    border-radius: 50px;
+  &__content {
+    display: flex;
+    flex-direction: column;
   }
+  &__filter {
+    display: flex;
+    width: 430px;
+    height: max-content;
+    justify-content: space-between;
+  }
+  &__item {
+    @include font-subtitle;
+    position: relative;
+    padding-right: 15px;
+  }
+  &__item::after {
+    content: " ";
+    @include font-subtitle;
+    position: absolute;
+    mask-image: url(#{$imgPath}arrow.svg);
+    mask-position: 7px 10px;
+    mask-repeat: no-repeat;
 
-  input[type="range"]::-webkit-slider-runnable-track {
-    height: 10px;
-    -webkit-appearance: none;
-    color: $beige;
-    margin-top: -1px;
-  }
+    -webkit-mask-image: url(#{$imgPath}arrow.svg);
+    -webkit-mask-position: 7px 10px;
+    -webkit-mask-repeat: no-repeat;
 
-  input[type="range"]::-webkit-slider-thumb {
-    width: 10px;
-    -webkit-appearance: none;
-    height: 10px;
-    cursor: ew-resize;
-    background: $darkGrey;
-    box-shadow: -75px 0 0 70px #3366a0;
-    border-radius: 50px;
+    background: $beige;
+    background-size: 52%;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    right: 0;
   }
-
-  input[type="range"]::-moz-range-progress {
-    background-color: #3366a0;
-  }
-  input[type="range"]::-moz-range-track {
-    background-color: $beige;
-  }
-  input[type="range"]::-ms-fill-lower {
-    background-color: #3366a0;
-  }
-  input[type="range"]::-ms-fill-upper {
-    background-color: $beige;
+  &__item_link {
+    @include font-text;
+    font-weight: $weight-300;
+    margin-top: 10px;
+    text-transform: capitalize;
+    // display: none;
   }
 }
 .product-card {
@@ -154,30 +158,6 @@
     margin-left: 10px;
     position: absolute;
   }
-}
-
-.product--available::after,
-.product--unavailable::after {
-  position: absolute;
-  @include font-subtitle;
-  font-size: 25px;
-  font-weight: 500;
-  top: 0;
-  left: 50%;
-  padding: 10px 5px 2px 5px;
-  border-bottom: 3px solid $darkGrey;
-  transform: translateX(-50%);
-  color: $darkGrey;
-}
-
-.product--unavailable {
-  filter: grayscale(1) opacity(0.7);
-}
-
-.product--unavailable::after {
-  content: "Нет в наличии";
-  font-size: 20px;
-  color: black;
 }
 
 @media screen and (max-width: 1260px) {
