@@ -1,7 +1,7 @@
 .catalog {
   margin: 0 auto 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   &__block_one {
     width: 150px;
     height: max-content;
@@ -17,23 +17,27 @@
       margin-bottom: 20px;
     }
   }
+
   &__block_two {
     width: 960px;
     height: max-content;
-  }
-  &__block_two {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
   &__content {
     display: flex;
     flex-direction: column;
+    margin-left: 10%;
   }
   &__filter {
     display: flex;
-    width: 430px;
+    width: 460px;
     height: max-content;
     justify-content: space-between;
+
+    &_menu {
+      display: none;
+    }
   }
   &__item {
     @include font-subtitle;
@@ -64,11 +68,10 @@
     font-weight: $weight-300;
     margin-top: 10px;
     text-transform: capitalize;
-    // display: none;
   }
 }
 .product-card {
-  width: 310px;
+  width: 95%;
   height: 461px;
   position: relative;
   margin-bottom: 30px;
@@ -103,14 +106,14 @@
   }
 
   &__img {
-    width: 310px;
+    width: 100%;
     max-height: 360px;
     object-fit: cover;
     object-position: 0 77%;
   }
   &__box {
     height: max-content;
-    width: 310px;
+    width: 100%;
     text-align: center;
   }
   &__subtitle {
@@ -129,7 +132,6 @@
     justify-content: center;
     width: 105px;
     color: rgba(37, 37, 37, 0.5);
-    font-weight: 300;
     margin: 0 auto 5px;
   }
   &__option {
@@ -162,37 +164,23 @@
 
 @media screen and (max-width: 1260px) {
   .catalog__block_two {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    justify-items: start;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 920px) {
   .catalog__block_two {
-    justify-items: end;
+    grid-template-columns: repeat(2, 1fr);
   }
   .product-card {
-    width: 240px;
     height: 401px;
-    position: relative;
-    margin-bottom: 30px;
 
     &__img {
-      width: 240px;
       max-height: 300px;
     }
-    &__box {
-      width: 240px;
-    }
     &__list {
-      @include font-text;
-      display: flex;
       justify-content: space-between;
-      width: 105px;
-      color: rgba(37, 37, 37, 0.5);
-      font-weight: 300;
-      margin: 0 auto 5px;
     }
   }
 }
@@ -208,27 +196,28 @@
     }
     &__sudtitle {
       width: 100%;
-      height: 20px;
       background: $beige;
       color: white;
       text-align: center;
-      font-size: 28px;
+      font-size: 25px;
       line-height: 21px;
       padding: 10px 0 10px;
       position: relative;
     }
+    &__content {
+      margin: 0;
+    }
     &__sudtitle::after {
       content: " ";
       position: absolute;
-      background: transparent url(#{$imgPath}arrow.svg) no-repeat 7px 7px;
-      background-size: 52%;
-      width: 29px;
+      background: transparent url(#{$imgPath}arrow.svg) no-repeat 5px 8px;
+      background-size: 70%;
+      width: 19px;
       height: 19px;
     }
     &__list {
       font-size: 28px;
       line-height: 21px;
-      font-weight: $weight-300;
       background: $white;
       color: $white;
       display: grid;
@@ -238,18 +227,49 @@
       visibility: hidden;
       height: 0;
       opacity: 0;
+    }
+    &__block_two {
+      height: max-content;
+      justify-items: center;
+    }
+    &__filter {
+      flex-direction: column;
+      width: 100%;
+      border-bottom: 1px solid $darkGrey;
+      margin-bottom: 2%;
+      &_menu {
+        display: block;
+        @include font-subtitle;
+        line-height: 26px;
+        margin-bottom: 15px;
 
-      li {
-        margin-bottom: 20px;
+        position: relative;
+        img {
+          margin-left: 10px;
+        }
+      }
+      &_menu::after {
+        content: " ";
+        @include font-subtitle;
+        position: absolute;
+        mask-image: url(#{$imgPath}arrow.svg);
+        mask-position: 7px 10px;
+        mask-repeat: no-repeat;
+
+        -webkit-mask-image: url(#{$imgPath}arrow.svg);
+        -webkit-mask-position: 7px 10px;
+        -webkit-mask-repeat: no-repeat;
+
+        background: $beige;
+        background-size: 52%;
+        width: 18px;
+        height: 18px;
+        top: 0;
+        right: 0;
       }
     }
-    &__block_two {
-      width: 100%;
-      height: max-content;
-    }
-    &__block_two {
-      grid-template-columns: repeat(2, auto);
-      justify-items: center;
+    &__item {
+      margin-bottom: 10px;
     }
   }
   .visibility {
@@ -263,25 +283,18 @@
 
 @media screen and (max-width: 570px) {
   .catalog {
-    margin: 0 auto 100px;
-    flex-direction: column;
+    margin: 0 auto 60px;
 
     &__block_one {
       width: 100%;
       height: max-content;
     }
     &__sudtitle {
-      width: 100%;
-      font-size: 18px;
-      line-height: 21px;
-      padding: 10px 0 10px;
-      position: relative;
+      @include font-text;
     }
     &__sudtitle::after {
-      background: transparent url(#{$imgPath}arrow.svg) no-repeat 5px 9px;
-      background-size: 36%;
-      width: 29px;
-      height: 19px;
+      background: transparent url(#{$imgPath}arrow.svg) no-repeat 5px 7px;
+      background-size: 50%;
     }
     &__list {
       li {
@@ -289,18 +302,9 @@
         margin-bottom: 10px;
       }
     }
-    &__block_two {
-      width: 100%;
-      height: max-content;
-    }
-    &__block_two {
-      grid-template-columns: repeat(2, auto);
-      justify-items: center;
-    }
   }
 
   .product-card {
-    width: 165px;
     height: 326px;
     margin-bottom: 5px;
 
@@ -318,36 +322,21 @@
     }
 
     &__img {
-      width: 165px;
       max-height: 230px;
-      object-fit: cover;
-      object-position: 0 77%;
-    }
-    &__box {
-      height: max-content;
-      width: 165px;
-      text-align: center;
     }
     &__subtitle {
-      font-size: 14px;
-      line-height: 16px;
+      @include font-text;
       margin-bottom: 5px;
-      position: relative;
     }
     &__price {
       font-size: 14px;
       line-height: 16px;
-      font-weight: 700;
-      margin-bottom: 5px;
     }
     &__list {
       font-size: 14px;
       line-height: 16px;
       display: flex;
       justify-content: space-evenly;
-      width: 105px;
-      color: rgba(37, 37, 37, 0.5);
-      font-weight: 300;
       margin: 0 auto 5px;
     }
 

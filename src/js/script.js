@@ -17,6 +17,32 @@ const dropDownMenu = document.querySelector('.active');
 const close = document.querySelector('.close');
 dropDownMenu.style.display = 'none';
 
+const catalogItem = document.querySelectorAll('.catalog__item');
+const catalogItemLink = document.querySelectorAll('.catalog__item_link');
+const catalogFilterMenu = document.querySelector('.catalog__filter_menu');
+
+// console.log(catalogFilterMenu);
+
+catalogFilterMenu.addEventListener('click', () => {
+  for (let i = 0; i < catalogItem.length; i++) {
+    catalogItem[i].style.display === 'none'
+      ? (catalogItem[i].style.display = 'block')
+      : (catalogItem[i].style.display = 'none');
+  }
+});
+
+for (let y = 0; y < catalogItem.length; y++) {
+  catalogItemLink[y].style.display = 'none';
+}
+
+for (let i = 0; i < catalogItem.length; i++) {
+  catalogItem[i].addEventListener('click', () =>
+    catalogItem[i].childNodes[1].style.display === 'none'
+      ? (catalogItem[i].childNodes[1].style.display = 'block')
+      : (catalogItem[i].childNodes[1].style.display = 'none')
+  );
+}
+
 burger.addEventListener('click', () =>
   dropDownMenu.style.display === 'none'
     ? (dropDownMenu.style.display = 'block')
@@ -115,7 +141,6 @@ if (!divClassPage.classList.contains('menu__two')) {
 
 let cardsData = [
   {
-    isAvailable: true,
     imgUrl: 'img/jackets.png',
     text: 'Белая куртка',
     price: 2900,
@@ -126,11 +151,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/coat.png',
     text: 'Синее пальто',
     price: 3150,
@@ -141,11 +164,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/FurCoats.png',
     text: 'Бежевая шуба',
     price: 4200,
@@ -156,11 +177,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/parks.png',
     text: 'Синяя парка',
     price: 2900,
@@ -171,11 +190,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/jackets.png',
     text: 'Белая куртка',
     price: 2900,
@@ -186,11 +203,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/coat.png',
     text: 'Синее пальто',
     price: 3150,
@@ -201,11 +216,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/jackets.png',
     text: 'Белая куртка',
     price: 2900,
@@ -216,11 +229,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/coat.png',
     text: 'Синее пальто',
     price: 3150,
@@ -231,11 +242,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/FurCoats.png',
     text: 'Бежевая шуба',
     price: 4200,
@@ -246,11 +255,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/parks.png',
     text: 'Синяя парка',
     price: 2900,
@@ -261,11 +268,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/jackets.png',
     text: 'Белая куртка',
     price: 2900,
@@ -276,11 +281,9 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 
   {
-    isAvailable: true,
     imgUrl: 'img/coat.png',
     text: 'Синее пальто',
     price: 3150,
@@ -291,7 +294,6 @@ let cardsData = [
       blue: '#6F83A4',
       yellow: '#F1DDAA',
     },
-    isSpecial: false,
   },
 ];
 

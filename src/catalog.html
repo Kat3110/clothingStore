@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html',{ 'title': 'Коталог' })
+  @@include('html/head.html',{ 'title': 'Каталог' })
 
   <body>
     <div class="page menu__two catalog-js">
@@ -37,6 +37,10 @@
         </div>
         <div class="catalog__content">
           <div class="catalog__filter">
+            <div class="catalog__filter_menu">
+              Фильтры
+              <img src="img/filtr.svg" alt="." />
+            </div>
             <div class="catalog__item">
               Размер
               <ul class="catalog__item_link">
@@ -51,16 +55,19 @@
             <div class="catalog__item">
               Цвет
               <ul class="catalog__item_link">
-                <li>xxs</li>
-                <li>xs</li>
-                <li>s</li>
+                <li>blue</li>
+                <li>beige</li>
+                <li>white</li>
               </ul>
             </div>
 
             <div class="catalog__item">
-              Цена
+              Цена от
               <ul class="catalog__item_link">
-                <li>xxs</li>
+                <li>1000 ></li>
+                <li>3500 ></li>
+                <li>7000 ></li>
+                <li>10000 ></li>
               </ul>
             </div>
 
