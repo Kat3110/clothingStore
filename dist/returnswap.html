@@ -13,28 +13,46 @@
   <body>
     <div class="page menu__two">
       <header class="header__menu header container">
-  <button type="button">
-    <div class="header__menu_burger svg"></div>
+  <button type="header__button">
+    <div class="header__menu_burger svg mask"></div>
     <div class="active">
-      <ul class="header__menu_burger-active">
-        <li><img class="close" src="img/close.svg" alt="закрыть" /></li>
-        <li><a href="payment.html">оплата и доставка</a></li>
-        <li><a href="returnswap.html">условия возврата</a></li>
-        <li><a href="contact.html">контакты</a></li>
+      <ul class="header__menu_burger-active container">
+        <li class="header__menu_burger-active_dropdown">
+          <img
+            class="header__menu_burger-active_img close"
+            src="img/close.svg"
+            alt="закрыть"
+          />
+        </li>
+        <li class="header__menu_burger-active_dropdown">
+          <a class="header__menu_burger-active_link" href="payment.html"
+            >оплата и доставка</a
+          >
+        </li>
+        <li class="header__menu_burger-active_dropdown">
+          <a class="header__menu_burger-active_link" href="returnswap.html"
+            >условия возврата</a
+          >
+        </li>
+        <li class="header__menu_burger-active_dropdown">
+          <a class="header__menu_burger-active_link" href="contact.html"
+            >контакты</a
+          >
+        </li>
       </ul>
     </div>
   </button>
   <div class="header__menu_link">
-    <a href="catalog.html">new</a>
-    <a href="catalog.html">каталог</a>
-    <a href="about.html">о нас</a>
+    <a class="header__menu_link_navigation" href="catalog.html">new</a>
+    <a class="header__menu_link_navigation" href="catalog.html">каталог</a>
+    <a class="header__menu_link_navigation" href="about.html">о нас</a>
   </div>
-  <a href="index.html" class="header__menu_logo"></a>
+  <a class="header__menu_logo" href="index.html"></a>
   <div class="header__menu_icon">
-    <div class="header__menu_icon_loupe svg"></div>
-    <div class="header__menu_icon_frame svg"></div>
-    <div class="header__menu_icon_like svg"></div>
-    <div class="header__menu_icon_basket svg"></div>
+    <div class="header__menu_icon_loupe svg mask"></div>
+    <div class="header__menu_icon_frame svg mask"></div>
+    <div class="header__menu_icon_like svg mask"></div>
+    <div class="header__menu_icon_basket svg mask"></div>
   </div>
 </header>
 

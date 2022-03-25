@@ -15,7 +15,6 @@ for (let i = 0; i < toggleMenu.length; i++) {
 const burger = document.querySelector('.header__menu_burger');
 const dropDownMenu = document.querySelector('.active');
 const close = document.querySelector('.close');
-dropDownMenu.style.display = 'none';
 
 const catalogItem = document.querySelectorAll('.catalog__item');
 const catalogItemLink = document.querySelectorAll('.catalog__item_list');
