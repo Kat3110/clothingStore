@@ -1,27 +1,23 @@
 .loyalty {
   margin: 30px auto 100px;
+}
+.loyalty__title {
+  @include font-subtitle;
+}
+.loyalty__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.loyalty__text {
+  @include font-text;
+  font-weight: 200;
+}
 
-  &__title {
-    @include font-subtitle;
-  }
-  &__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    span {
-      font-weight: 200;
-      font-size: 19px;
-    }
-    p {
-      @include font-text;
-      font-weight: 200;
-    }
-  }
-  &__subtitle {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    margin-bottom: 20px;
-  }
+.loyalty__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 20px;
 }

@@ -5,12 +5,15 @@
   <body>
     <div class="page menu__two">
       @@include('html/header.html')
-      <section class="breadcrumb container">
-        <ul class="breadcrumb__item">
-          <li><a href="index.html">Главная</a></li>
-          <li>Политика конфиденциальности</li>
-        </ul>
+     <section class="breadcrumb container">
+        <div class="breadcrumb__block">
+          <p class="breadcrumb__block_text">
+            <a class="breadcrumb__block_text_link" href="index.html">Главная</a>
+          </p>
+          <p class="breadcrumb__block_text">Политика конфиденциальности</p>
+        </в>
       </section>
+
       @@include('html/confidentiality.html') @@include('html/footer.html')
     </div>
     <script src="js/app.min.js"></script>

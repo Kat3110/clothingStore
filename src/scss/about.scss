@@ -1,13 +1,13 @@
 .about {
   margin: 30px auto 100px;
-  &__subtitle {
-    @include font-subtitle();
-  }
-  p {
-    font-weight: 200;
-    @include font-text();
-  }
-  p:nth-of-type(1) {
-    margin-bottom: 20px;
-  }
+}
+.about__subtitle {
+  @include font-subtitle();
+}
+.about__subtitle_text {
+  font-weight: 200;
+  @include font-text();
+}
+.about__subtitle_text:nth-of-type(1) {
+  margin-bottom: 20px;
 }

@@ -14,25 +14,25 @@
 }
 .slider-item {
   height: max-content;
-
-  a {
-    font-weight: $weight-300;
-    font-size: $size-20;
-    line-height: $height-23;
-    text-align: center;
-    color: $white;
-    position: relative;
-    width: 100%;
-    display: block;
-    img {
-      width: 98%;
-      height: 31.25vw;
-      display: block;
-      object-fit: cover;
-      margin: 0 auto;
-    }
-  }
 }
+.slider-item__link {
+  font-weight: $weight-300;
+  font-size: $size-20;
+  line-height: $height-23;
+  text-align: center;
+  color: $white;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.slider-item__link_img {
+  width: 98%;
+  height: 31.25vw;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
 .slider__span {
   width: 98%;
   height: 40px;
@@ -50,34 +50,38 @@
 .slider {
   margin: 0 auto 100px;
   height: max-content;
-
-  &__title {
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 42px;
-    color: $darkGrey;
-    margin: 0 0 50px;
-  }
-  .btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: $beige;
-    top: 50%;
-    right: 20px;
-  }
-  .btn-prev {
-    top: 50%;
-    left: 20px;
-  }
 }
+.slider__title {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  color: $darkGrey;
+  margin: 0 0 50px;
+}
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: $beige;
+  top: 50%;
+  right: 20px;
+}
+.btn-prev {
+  top: 50%;
+  left: 20px;
+}
+
 .btn-next {
-  background: transparent url(#{$imgPath}arrow.svg) no-repeat center;
+  background-image: url(#{$imgPath}arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: 65%;
   transform: rotate(-90deg);
 }
 .btn-prev {
-  background: transparent url(#{$imgPath}arrow.svg) no-repeat center;
+  background-image: url(#{$imgPath}arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: 65%;
   transform: rotate(90deg);
 }
@@ -100,23 +104,17 @@
   .slider__title {
     margin-left: 0;
   }
-  .slider-item {
-    a {
-      img {
-        height: 48.913vw;
-      }
-    }
+  .slider-item__link_img {
+    height: 48.913vw;
   }
 }
+
 @media screen and (max-width: 782px) {
-  .slider-item {
-    a {
-      img {
-        height: 57.545vw;
-      }
-    }
+  .slider-item__link_img {
+    height: 57.545vw;
   }
 }
+
 @media screen and (max-width: 570px) {
   .slider .btn {
     width: 30px;
@@ -127,11 +125,7 @@
   }
 }
 @media screen and (max-width: 376px) {
-  .slider-item {
-    a {
-      img {
-        height: 230px;
-      }
-    }
+  .slider-item__link_img {
+    height: 230px;
   }
 }

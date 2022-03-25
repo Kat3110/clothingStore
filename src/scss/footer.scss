@@ -1,128 +1,124 @@
 .footer {
   height: max-content;
   margin: 0 auto 10px;
-
-  &__menu {
-    width: 25%;
-  }
-
-  &__list {
-    justify-content: space-between;
-    display: flex;
-    margin-bottom: 36px;
-    text-align: left;
-  }
-
-  h2 {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 23px;
-    color: $darkGrey;
-  }
-  ul {
-    width: 100%;
-
-    li {
-      @include font-text;
-      font-weight: 200;
-
-      color: $darkGrey;
-      margin-bottom: 10px;
-      display: flex;
-      a {
-        color: $darkGrey;
-        cursor: pointer;
-        div {
-          margin-right: 10px;
-        }
-      }
-    }
-    li:nth-child(1) {
-      margin-top: 20px;
-    }
-  }
-  span {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    color: $darkGrey;
-    display: flex;
-    justify-content: center;
-  }
 }
-.footer a:hover {
+
+.footer__list {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.footer__menu {
+  width: 25%;
+}
+.footer__menu_subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: $darkGrey;
+}
+.footer__menu_list {
+  width: 100%;
+}
+.footer__menu_list_text {
+  @include font-text;
+  font-weight: 200;
+
+  color: $darkGrey;
+  margin-bottom: 10px;
+  display: flex;
+}
+.footer__menu_list_text:nth-child(1) {
+  margin-top: 20px;
+}
+.footer__menu_list_link {
+  color: $darkGrey;
+  cursor: pointer;
+}
+.footer__menu_list_link:hover {
   color: $beige;
   transition: 0.3s ease;
 }
-@media screen and (max-width: 782px) {
-  .footer {
-    &__list {
-      margin-bottom: 40px;
-    }
-    h2 {
-      font-size: 17px;
-      line-height: 21px;
-    }
+.footer__menu_list_link-box {
+  margin-right: 10px;
+}
+.footer__reserved {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: $darkGrey;
+  display: flex;
+  justify-content: center;
+}
 
-    ul {
-      li {
-        font-size: 12px;
-        line-height: 17px;
-      }
-    }
+@media screen and (max-width: 782px) {
+  .footer__list {
+    margin-bottom: 40px;
+  }
+  .footer__menu_subtitle {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .footer__menu_list_text {
+    font-size: 12px;
+    line-height: 17px;
   }
 }
+
 @media screen and (max-width: 590px) {
   .footer {
     margin-bottom: 5px;
-    &__list {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    &__menu {
-      width: 335px;
+  }
 
-      h2 {
-        border-bottom: 0.3px solid $darkGrey;
-        position: relative;
-        font-size: 18px;
-        line-height: 21px;
-        padding-bottom: 5px;
-        margin-top: 20px;
-      }
+  .footer__list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .footer__menu {
+    width: 335px;
+    cursor: pointer;
+  }
+  .footer__menu_subtitle {
+    border-bottom: 0.3px solid $darkGrey;
+    position: relative;
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
 
-      ul {
-        display: none;
-      }
-      li {
-        font-weight: 200;
-        font-size: 14px;
-        line-height: 16px;
-        justify-content: center;
-      }
+  .footer__menu_list {
+    display: none;
+  }
+  .footer__menu_list_text {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+    justify-content: center;
+  }
+  .visible {
+    display: block;
+  }
 
-      .visible {
-        display: block;
-      }
-    }
-    &__menu h2::after {
-      content: " ";
-      width: 14px;
-      height: 14px;
-      -webkit-mask-image: url(#{$imgPath}arrow.svg);
-      -webkit-mask-position: center;
-      -webkit-mask-size: 90%;
-      mask-image: url(#{$imgPath}arrow.svg);
-      mask-position: center;
-      mask-size: 90%;
-      background: $beige;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      position: absolute;
-      right: 14px;
-      top: 4px;
-    }
+  .footer__menu_subtitle::after {
+    content: " ";
+    width: 14px;
+    height: 14px;
+    -webkit-mask-image: url(#{$imgPath}arrow.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-size: 90%;
+    mask-image: url(#{$imgPath}arrow.svg);
+    mask-position: center;
+    mask-size: 90%;
+    background: $beige;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    position: absolute;
+    right: 14px;
+    top: 4px;
   }
 }

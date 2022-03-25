@@ -2,140 +2,138 @@
   width: 600px;
   height: 270px;
   margin: 0 auto 100px;
-  form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+}
+.distribution__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-  &__subtitle {
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    color: $darkGrey;
-    margin: 0 0 50px;
-  }
+.distribution__form_subtitle {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: $darkGrey;
+  margin: 0 0 50px;
+}
 
-  &__mail {
-    @include font-text;
-    width: 600px;
-    height: 50px;
-    border: 0.5px solid $darkGrey;
-    box-sizing: border-box;
-    text-align: center;
-    font-weight: 200;
-    color: rgba(37, 37, 37, 0.5);
-    margin: 0 0 20px;
-  }
+.distribution__form_mail {
+  @include font-text;
+  width: 600px;
+  height: 50px;
+  border: 0.5px solid $darkGrey;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 200;
+  color: rgba(37, 37, 37, 0.5);
+  margin: 0 0 20px;
+}
 
-  &__button {
-    @include font-text;
-    width: 600px;
-    height: 50px;
-    background: $beige;
-    font-weight: 200;
-    text-align: center;
-    text-transform: uppercase;
-    color: $white;
-    margin: 0 0 20px;
-  }
-  &__button:hover {
-    box-shadow: 0px 5px 7px rgba(37, 37, 37, 0.15);
-    transition: 0.3s ease;
-  }
-  &__button:active {
-    box-shadow: inset 0px 3px 7px rgba(37, 37, 37, 0.15);
-    transition: 0.3s ease;
-  }
-  &__button:focus:not(:active) {
-    background: $white;
-    color: $darkGrey;
-    border: 0.5px solid $beige;
-  }
-  &__text {
-    @include font-text;
-    font-weight: 200;
-    text-align: center;
-    color: $darkGrey;
-  }
+.distribution__form_button {
+  @include font-text;
+  width: 600px;
+  height: 50px;
+  background: $beige;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  margin: 0 0 20px;
+}
+.distribution__form_button:hover {
+  box-shadow: 0px 5px 7px rgba(37, 37, 37, 0.15);
+  transition: 0.3s ease;
+}
+.distribution__form_button:active {
+  box-shadow: inset 0px 3px 7px rgba(37, 37, 37, 0.15);
+  transition: 0.3s ease;
+}
+.distribution__form_button:focus:not(:active) {
+  background: $white;
+  color: $darkGrey;
+  border: 0.5px solid $beige;
+}
+.distribution__form_text {
+  @include font-text;
+  font-weight: 200;
+  text-align: center;
+  color: $darkGrey;
 }
 @media screen and (max-width: 920px) {
   .distribution {
     margin: 0 auto 90px;
+  }
+  .distribution__form_mail {
+    width: 520px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-    &__mail {
-      width: 520px;
-      font-size: 14px;
-      line-height: 18px;
-    }
-
-    &__button {
-      width: 520px;
-      height: 50px;
-      font-size: 14px;
-      line-height: 18px;
-    }
-    &__text {
-      font-size: 15px;
-      line-height: 18px;
-    }
+  .distribution__form_button {
+    width: 520px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .distribution__form_text {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
+
 @media screen and (max-width: 570px) {
   .distribution {
     width: 355px;
     margin: 0 auto 60px;
+  }
+  .distribution__form_subtitle {
+    font-size: 27px;
+    line-height: 34px;
+    margin: 0 0 40px;
+  }
 
-    &__subtitle {
-      font-size: 27px;
-      line-height: 34px;
-      margin: 0 0 40px;
-    }
+  .distribution__form_mail {
+    width: 355px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-    &__mail {
-      width: 355px;
-      font-size: 14px;
-      line-height: 18px;
-    }
-
-    &__button {
-      width: 355px;
-      height: 50px;
-      font-size: 14px;
-      line-height: 18px;
-    }
-    &__text {
-      font-size: 15px;
-      line-height: 18px;
-    }
+  .distribution__form_button {
+    width: 355px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .distribution__form_text {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
 @media screen and (max-width: 376px) {
   .distribution {
     width: 335px;
     margin: 0 auto 60px;
+  }
+  .distribution__form_subtitle {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 30px;
+  }
 
-    &__subtitle {
-      font-size: 24px;
-      line-height: 28px;
-      margin: 0 0 30px;
-    }
+  .distribution__form_mail {
+    width: 335px;
+    font-size: 14px;
+    line-height: 16px;
+  }
 
-    &__mail {
-      width: 335px;
-      font-size: 14px;
-      line-height: 16px;
-    }
-
-    &__button {
-      width: 335px;
-      font-size: 14px;
-      line-height: 16px;
-    }
-    &__text {
-      font-size: 14px;
-      line-height: 16px;
-    }
+  .distribution__form_button {
+    width: 335px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .distribution__form_text {
+    font-size: 14px;
+    line-height: 16px;
   }
 }

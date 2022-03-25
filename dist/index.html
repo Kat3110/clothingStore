@@ -50,80 +50,94 @@
     <div class="slider-container">
       <div class="slider-track">
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/jackets.png" alt="куртки" /><span
-              class="slider__span"
-              >Куртки</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/jackets.png"
+              alt="куртки"
+            /><span class="slider__span">Куртки</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/coat.png" alt="пальто" /><span class="slider__span"
-              >Пальто</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/coat.png"
+              alt="пальто"
+            /><span class="slider__span">Пальто</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/parks.png" alt="парки" /><span class="slider__span"
-              >Парки</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/parks.png"
+              alt="парки"
+            /><span class="slider__span">Парки</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/FurCoats.png" alt="шубы" /><span
-              class="slider__span"
-              >Шубы</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/FurCoats.png"
+              alt="шубы"
+            /><span class="slider__span">Шубы</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/jackets.png" alt="куртки" /><span
-              class="slider__span"
-              >Куртки</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/jackets.png"
+              alt="куртки"
+            /><span class="slider__span">Куртки</span></a
           >
         </div>
 
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/jackets.png" alt="куртки" /><span
-              class="slider__span"
-              >Куртки</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/jackets.png"
+              alt="куртки"
+            /><span class="slider__span">Куртки</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/coat.png" alt="пальто" /><span class="slider__span"
-              >Пальто</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/coat.png"
+              alt="пальто"
+            /><span class="slider__span">Пальто</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/parks.png" alt="парки" /><span class="slider__span"
-              >Парки</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/parks.png"
+              alt="парки"
+            /><span class="slider__span">Парки</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/FurCoats.png" alt="шубы" /><span
-              class="slider__span"
-              >Шубы</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/FurCoats.png"
+              alt="шубы"
+            /><span class="slider__span">Шубы</span></a
           >
         </div>
         <div class="slider-item">
-          <a href="#"
-            ><img src="img/jackets.png" alt="куртки" /><span
-              class="slider__span"
-              >Куртки</span
-            ></a
+          <a class="slider-item__link" href="#"
+            ><img
+              class="slider-item__link_img"
+              src="img/jackets.png"
+              alt="куртки"
+            /><span class="slider__span">Куртки</span></a
           >
         </div>
       </div>
@@ -135,17 +149,21 @@
   </div>
 </section>
  <section class="distribution">
-  <form>
-    <h1 class="distribution__subtitle">Узнайте первым о новинках</h1>
-    <input class="distribution__mail" type="email" placeholder="Ваш e-mail*" />
+  <form class="distribution__form">
+    <h1 class="distribution__form_subtitle">Узнайте первым о новинках</h1>
     <input
-      class="distribution__button"
+      class="distribution__form_mail"
+      type="email"
+      placeholder="Ваш e-mail*"
+    />
+    <input
+      class="distribution__form_button"
       type="button"
       value="подписаться"
       onclick="button.click(this);"
       onblur="button.blur(this)"
     />
-    <p class="distribution__text">
+    <p class="distribution__form_text">
       Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих
       персональных данных и ознакомлен(а) с условиями конфиденциальности.
     </p>
@@ -155,47 +173,95 @@
       <footer class="footer container">
   <nav class="footer__list">
     <div class="footer__menu">
-      <h2>КОМПАНИЯ</h2>
-      <ul>
-        <li><a href="about.html">О нас</a></li>
-        <li><a href="contact.html">Контакты</a></li>
+      <h2 class="footer__menu_subtitle">КОМПАНИЯ</h2>
+      <ul class="footer__menu_list">
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="about.html">О нас</a>
+        </li>
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="contact.html">Контакты</a>
+        </li>
       </ul>
     </div>
     <div class="footer__menu">
-      <h2>ПОЛЕЗНОЕ</h2>
-      <ul>
-        <li><a href="payment.html">Оплата и доставка</a></li>
-        <li><a href="returnswap.html">Условия возврата</a></li>
-        <li><a href="loyalty.html">Бонусная система</a></li>
+      <h2 class="footer__menu_subtitle">ПОЛЕЗНОЕ</h2>
+      <ul class="footer__menu_list">
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="payment.html"
+            >Оплата и доставка</a
+          >
+        </li>
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="returnswap.html"
+            >Условия возврата</a
+          >
+        </li>
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="loyalty.html"
+            >Бонусная система</a
+          >
+        </li>
       </ul>
     </div>
 
     <div class="footer__menu">
-      <h2>ПОКУПАТЕЛЮ</h2>
-      <ul>
-        <li><a href="">Избранное</a></li>
-        <li><a href="">Публичная оферта</a></li>
-        <li><a href="confidentiality.html">Политика конфиденциальности</a></li>
+      <h2 class="footer__menu_subtitle">ПОКУПАТЕЛЮ</h2>
+      <ul class="footer__menu_list">
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="">Избранное</a>
+        </li>
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="">Публичная оферта</a>
+        </li>
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="confidentiality.html"
+            >Политика конфиденциальности</a
+          >
+        </li>
       </ul>
     </div>
 
     <div class="footer__menu">
-      <h2>КОНТАКТЫ</h2>
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><div><img src="img/inst.svg" alt="соцсети" /></div
+      <h2 class="footer__menu_subtitle">КОНТАКТЫ</h2>
+      <ul class="footer__menu_list">
+        <li class="footer__menu_list_text">
+          <a
+            class="footer__menu_list_link"
+            href="https://www.instagram.com/"
+            target="_blank"
+            ><div class="footer__menu_list_link-box">
+              <img
+                class="footer__menu_list_link-box"
+                src="img/inst.svg"
+                alt="соцсети"
+              /></div
           ></a>
-          <a href="https://web.telegram.org/" target="_blank"
-            ><div><img src="img/telega.svg" alt="соцсети" /></div
+          <a
+            class="footer__menu_list_link"
+            href="https://web.telegram.org/"
+            target="_blank"
+            ><div class="footer__menu_list_link-box">
+              <img
+                class="footer__menu_list_link-box"
+                src="img/telega.svg"
+                alt="соцсети"
+              /></div
           ></a>
         </li>
-        <li><a href="tel:+380730963644">+38(073) 096 36 44</a></li>
-        <li><a href="mailto:info@yanki.com">info@yanki.com</a></li>
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="tel:+380730963644"
+            >+38(073) 096 36 44</a
+          >
+        </li>
+        <li class="footer__menu_list_text">
+          <a class="footer__menu_list_link" href="mailto:info@yanki.com"
+            >info@yanki.com</a
+          >
+        </li>
       </ul>
     </div>
   </nav>
-  <span>&#169; 2021 Yanki. All rights reserved</span>
+  <span class="footer__reserved">&#169; 2021 Yanki. All rights reserved</span>
 </footer>
 
     </div>

@@ -1,19 +1,18 @@
 .confidentiality {
   margin: 20px auto 100px;
-  &__subtitle {
-    @include font-subtitle;
-    text-transform: uppercase;
-  }
-  &__list {
-    font-weight: $weight-300;
-    @include font-text;
-    text-transform: uppercase;
-
-    li {
-      font-weight: 200;
-      @include font-text;
-      margin-top: 20px;
-      text-transform: none;
-    }
-  }
+}
+.confidentiality__subtitle {
+  @include font-subtitle;
+  text-transform: uppercase;
+}
+.confidentiality__list_text {
+  font-weight: $weight-300;
+  @include font-text;
+  text-transform: uppercase;
+}
+.confidentiality__list_text {
+  font-weight: 200;
+  @include font-text;
+  margin-top: 20px;
+  text-transform: none;
 }

@@ -5,82 +5,420 @@
   <body>
     <div class="page menu__two catalog-js">
       @@include('html/header.html')
+
+
       <section class="breadcrumb container">
-        <ul class="breadcrumb__item">
-          <li><a href="index.html">Главная</a></li>
-          <li>Коталог</li>
-        </ul>
+        <div class="breadcrumb__block">
+          <p class="breadcrumb__block_text">
+            <a class="breadcrumb__block_text_link" href="index.html">Главная</a>
+          </p>
+          <p class="breadcrumb__block_text">Каталог</p>
+        </в>
       </section>
 
       <section class="catalog container">
         <div class="catalog__block_one">
           <h2 class="catalog__sudtitle">Каталог</h2>
           <ul class="catalog__list">
-            <li><a href="">New</a></li>
-            <li><a href="">Bestsellers</a></li>
-            <li><a href="">Верхняя одежда</a></li>
-            <li><a href="">Шубы</a></li>
-            <li><a href="">Тренчи</a></li>
-            <li><a href="">Пальто</a></li>
-            <li><a href="">Пуховики и жилеты</a></li>
-            <li><a href="">Костюмы</a></li>
-            <li><a href="">Жакеты</a></li>
-            <li><a href="">Платья</a></li>
-            <li><a href="">Рубашки и блузы</a></li>
-            <li><a href="">Юбки</a></li>
-            <li><a href="">Футболки и топы</a></li>
-            <li><a href="">Аксессуары</a></li>
-            <li><a href="">Sale</a></li>
-            <li><a href="">Summer</a></li>
-            <li><a href="">Посмотреть всё</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">New</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Bestsellers</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Верхняя одежда</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Шубы</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Тренчи</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Пальто</a></li>
+            <li class="catalog__list_item">
+              <a class="catalog__list_item_link" href="#">Пуховики и жилеты</a>
+            </li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Костюмы</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Жакеты</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Платья</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Рубашки и блузы</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Юбки</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Футболки и топы</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Аксессуары</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Sale</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Summer</a></li>
+            <li class="catalog__list_item"><a class="catalog__list_item_link" href="#">Посмотреть всё</a></li>
           </ul>
         </div>
         <div class="catalog__content">
           <div class="catalog__filter">
             <div class="catalog__filter_menu">
               Фильтры
-              <img src="img/filtr.svg" alt="." />
+              <img class="catalog__filter_menu_img" src="img/filtr.svg" alt="." />
             </div>
             <div class="catalog__item">
               Размер
-              <ul class="catalog__item_link">
-                <li>xxs</li>
-                <li>xs</li>
-                <li>s</li>
-                <li>m</li>
-                <li>l</li>
+              <ul class="catalog__item_list">
+                <li class="catalog__item_list_dropdown">xxs</li>
+                <li class="catalog__item_list_dropdown">xs</li>
+                <li class="catalog__item_list_dropdown">s</li>
+                <li class="catalog__item_list_dropdown">m</li>
+                <li class="catalog__item_list_dropdown">l</li>
               </ul>
             </div>
 
             <div class="catalog__item">
               Цвет
-              <ul class="catalog__item_link">
-                <li>blue</li>
-                <li>beige</li>
-                <li>white</li>
+              <ul class="catalog__item_list">
+                <li class="catalog__item_list_dropdown">blue</li>
+                <li class="catalog__item_list_dropdown">beige</li>
+                <li class="catalog__item_list_dropdown">white</li>
               </ul>
             </div>
 
             <div class="catalog__item">
               Цена от
-              <ul class="catalog__item_link">
-                <li>1000 ></li>
-                <li>3500 ></li>
-                <li>7000 ></li>
-                <li>10000 ></li>
+              <ul class="catalog__item_list">
+                <li class="catalog__item_list_dropdown">1500 ></li>
+                <li class="catalog__item_list_dropdown">3500 ></li>
+                <li class="catalog__item_list_dropdown">7000 ></li>
+                <li class="catalog__item_list_dropdown">10000 ></li>
               </ul>
             </div>
 
             <div class="catalog__item">
               Сортировать по
-              <ul class="catalog__item_link">
-                <li>Убыванию</li>
-                <li>Возрастанию</li>
-                <li>Новинкам</li>
+              <ul class="catalog__item_list">
+                <li class="catalog__item_list_dropdown">Убыванию</li>
+                <li class="catalog__item_list_dropdown">Возрастанию</li>
+                <li class="catalog__item_list_dropdown">Новинкам</li>
               </ul>
             </div>
           </div>
-          <div class="catalog__block_two"></div>
+          <div class="catalog__block_two">
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/jackets.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Белая куртка</h2>
+                <p class="product-card__price">2900 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XXS</li>
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/coat.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Синее пальто</h2>
+                <p class="product-card__price">3150 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/FurCoats.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Бежевая шуба</h2>
+                <p class="product-card__price">4200 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/parks.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Синяя парка</h2>
+                <p class="product-card__price">2900 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/jackets.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Белая куртка</h2>
+                <p class="product-card__price">2900 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XXS</li>
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/coat.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Синее пальто</h2>
+                <p class="product-card__price">3150 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/jackets.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Белая куртка</h2>
+                <p class="product-card__price">2900 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XXS</li>
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/coat.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Синее пальто</h2>
+                <p class="product-card__price">3150 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/FurCoats.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Бежевая шуба</h2>
+                <p class="product-card__price">4200 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/parks.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Синяя парка</h2>
+                <p class="product-card__price">2900 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/jackets.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Белая куртка</h2>
+                <p class="product-card__price">2900 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XXS</li>
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">S</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card__like">
+                <div class="product-card__like_mask"></div>
+              </div>
+              <img class="product-card__img" src="img/coat.png" alt="." />
+              <div class="product-card__box">
+                <h2 class="product-card__subtitle">Синее пальто</h2>
+                <p class="product-card__price">3150 грн</p>
+                <ul class="product-card__list">
+                  <li class="product-card__list_buy">XS</li>
+                  <li class="product-card__list_buy">M</li>
+                  <li class="product-card__list_buy">L</li>
+                </ul>
+                <div class="product-card__option">
+                  <span
+                    class="product-card__circul product-card__circul_white"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_blue"
+                  ></span>
+                  <span
+                    class="product-card__circul product-card__circul_yellow"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
