@@ -494,6 +494,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .new__title {
   font-weight: 300;
   font-size: 46px;
@@ -503,12 +504,14 @@
   opacity: 0.85;
   width: max-content;
 }
-.new span {
+
+.new__border {
   width: 120px;
   border-top: 1px solid white;
   display: block;
   margin: 20px 0;
 }
+
 .new__text {
   font-size: 16px;
   line-height: 20px;
@@ -518,9 +521,11 @@
   color: #fff;
   width: max-content;
 }
-.new__text a {
+
+.new__text_link {
   color: #fff;
 }
+
 .new__text::after {
   content: " ";
   display: inline-block;
@@ -529,6 +534,7 @@
   width: 18px;
   height: 18px;
 }
+
 .new__text:hover:after {
   -webkit-mask-image: url(../img/arrow.svg);
   -webkit-mask-position: 1px center;
@@ -539,7 +545,9 @@
   width: 18px;
   height: 18px;
 }
-.new__text:active, .new__text:active:after {
+
+.new__text:active,
+.new__text:active:after {
   opacity: 0.7;
 }
 
@@ -552,13 +560,16 @@
   .new {
     margin: 260px auto 300px;
   }
+
   .new__title {
     font-size: 39px;
     line-height: 46px;
   }
+
   .new__text {
     font-size: 15px;
   }
+
   .new__text::after {
     width: 16px;
     height: 16px;
@@ -568,14 +579,17 @@
   .new {
     margin: 246px auto 351px;
   }
+
   .new__title {
     font-size: 32px;
     line-height: 38px;
   }
+
   .new__text {
     font-size: 14px;
     line-height: 16px;
   }
+
   .new__text::after {
     width: 14px;
     height: 14px;
@@ -809,21 +823,21 @@
   margin-bottom: 20px;
 }
 
-.description__block ol {
+.description__block_item {
   width: 500px;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
 }
 
-.description__block ol li {
+.description__block_item_txt {
   font-weight: 300;
   margin-bottom: 5px;
   font-size: 16px;
   line-height: 20px;
 }
 
-.description__block ol li:first-child {
+.description__block_item_txt:first-child {
   margin-top: 10px;
 }
 
@@ -840,33 +854,33 @@
   justify-content: space-between;
 }
 
-.description__list li {
+.description__list_item {
   width: 206px;
   display: flex;
   align-items: center;
 }
 
-.description__list li:first-child {
+.description__list_item:first-child {
   width: 267px;
 }
 
-.description__list li:last-child {
+.description__list_item:last-child {
   width: 540px;
 }
 
-.description__list li img {
+.description__list_item_img {
   width: 30px;
   height: 44px;
   margin-right: 15px;
 }
 
-.payment .description__list li p {
+.description__list_item_paragraph {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
 }
 
-.returnswap .description__box p {
+.returnswap .description__subtitle_txt {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
@@ -880,7 +894,7 @@
   text-align: center;
 }
 
-.returnswap .description__list li {
+.returnswap .description__list_schedule {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
@@ -890,12 +904,12 @@
   width: 165px;
 }
 
-.returnswap .description__list li img {
+.returnswap .description__list_schedule_img {
   object-fit: contain;
   margin: 0 0 2px;
 }
 
-.returnswap .description__box p {
+.returnswap .description__subtitle_txt {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
@@ -909,7 +923,7 @@
   text-align: center;
 }
 
-.returnswap .description__list li {
+.returnswap .description__list_schedule {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
@@ -924,12 +938,12 @@
     align-items: center;
   }
 
-  .payment .description__list li p {
+  .payment .description__list_item_paragraph {
     width: 400px;
     font-size: 14px;
   }
 
-  .payment .description__list li:last-child {
+  .payment .description__list_item:last-child {
     width: 400px;
   }
 }
@@ -939,14 +953,14 @@
     flex-direction: column;
   }
 
-  .payment .description__list li {
+  .payment .description__list_item {
     width: 600px;
     font-size: 14px;
     justify-content: space-evenly;
     margin-bottom: 15px;
   }
 
-  .payment .description__list li:last-child {
+  .payment .description__list_item:last-child {
     width: 600px;
     margin-bottom: 0;
   }
@@ -957,7 +971,7 @@
     justify-content: center;
   }
 
-  .returnswap .description__list li {
+  .returnswap .description__list_schedule {
     font-size: 15px;
     line-height: 19px;
     width: 180px;
@@ -971,11 +985,11 @@
     margin-bottom: 18px;
   }
 
-  .payment .description__block ol {
+  .payment .description__block_item {
     width: 100%;
   }
 
-  .returnswap .description__box p {
+  .returnswap .description__subtitle_txt {
     font-weight: 300;
     font-size: 13px;
     line-height: 17px;
@@ -993,7 +1007,7 @@
     margin-bottom: 15px;
   }
 
-  .payment .description__block ol {
+  .payment .description__block_item {
     font-size: 14px;
     line-height: 20px;
   }
@@ -1002,17 +1016,17 @@
     margin-bottom: 15px;
   }
 
-  .payment .description__block ol:last-child {
+  .payment .description__block_item:last-child {
     margin-top: 15px;
   }
 
-  .payment .description__block ol li {
+  .payment .description__block_item_txt {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 5px;
   }
 
-  .payment .description__block ol li:last-child {
+  .payment .description__block_item_txt:last-child {
     margin-bottom: 0;
   }
 
@@ -1026,41 +1040,41 @@
     width: 335px;
   }
 
-  .payment .description__list li {
+  .payment .description__list_item {
     width: 335px;
   }
 
-  .payment .description__list li:last-child {
+  .payment .description__list_item:last-child {
     width: 335px;
   }
 
-  .payment .description__list li img {
+  .payment .description__list_item_img {
     width: 35px;
     height: 39px;
     margin-right: 25px;
   }
 }
 @media screen and (max-width: 480px) {
-  .returnswap .description__box p {
+  .returnswap .description__subtitle_txt {
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 17px;
   }
 
-  .returnswap .description__list li {
+  .returnswap .description__list_schedule {
     width: 335px;
   }
 }
 @media screen and (max-width: 376px) {
-  .returnswap .description__box p {
+  .returnswap .description__subtitle_txt {
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 4px;
   }
 
-  .returnswap .description__box p:last-child {
+  .returnswap .description__subtitle_txt:last-child {
     margin-bottom: 0;
   }
 
@@ -1077,7 +1091,7 @@
     width: 335px;
   }
 
-  .returnswap .description__list li {
+  .returnswap .description__list_schedule {
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
@@ -1085,11 +1099,11 @@
     margin-bottom: 15px;
   }
 
-  .returnswap .description__list li:last-child {
+  .returnswap .description__list_schedule:last-child {
     margin-bottom: 0;
   }
 
-  .returnswap .description__list li img {
+  .returnswap .description__list_schedule_img {
     object-fit: contain;
     margin: 0 0 5px;
     width: 30px;
@@ -1243,6 +1257,7 @@
   color: #252525;
   margin: 0 auto 100px;
 }
+
 .connection__subtitle {
   font-weight: 300;
   font-size: 20px;
@@ -1250,26 +1265,31 @@
   line-height: 23px;
   margin-bottom: 30px;
 }
+
 .connection__box {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .connection__list {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
 }
+
 .connection__list_item {
   font-weight: 200;
   font-size: 16px;
   line-height: 20px;
   margin-top: 20px;
 }
+
 .connection__list_item:first-child {
   display: flex;
 }
-.connection__list_item:first-child a {
+
+.connection__list_item_link {
   margin-right: 15px;
 }
 
@@ -1277,10 +1297,12 @@
   .connection {
     margin-bottom: 80px;
   }
+
   .connection__box {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
+
   .connection__list {
     margin-bottom: 20px;
   }
@@ -1289,25 +1311,30 @@
   .connection {
     margin-bottom: 60px;
   }
+
   .connection__subtitle {
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 15px;
   }
+
   .connection__list {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 15px;
   }
+
   .connection__list_item {
     font-size: 14px;
     line-height: 16px;
     margin-top: 15px;
   }
+
   .connection__list_item:first-child {
     display: flex;
   }
-  .connection__list_item:first-child a img {
+
+  .connection__list_item_img {
     width: 25px;
     height: 25px;
   }

@@ -1,74 +1,68 @@
 .connection {
   color: $darkGrey;
   margin: 0 auto 100px;
-
-  &__subtitle {
-    @include font-subtitle;
-  }
-  &__box {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  &__list {
-    font-weight: 300;
-    @include font-text;
-
-    &_item {
-      font-weight: 200;
-      @include font-text;
-      margin-top: 20px;
-    }
-    &_item:first-child {
-      display: flex;
-      a {
-        margin-right: 15px;
-      }
-    }
-  }
 }
+.connection__subtitle {
+  @include font-subtitle;
+}
+.connection__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.connection__list {
+  font-weight: 300;
+  @include font-text;
+}
+.connection__list_item {
+  font-weight: 200;
+  @include font-text;
+  margin-top: 20px;
+}
+.connection__list_item:first-child {
+  display: flex;
+}
+.connection__list_item_link {
+  margin-right: 15px;
+}
+
 @media screen and (max-width: 782px) {
   .connection {
     margin-bottom: 80px;
-
-    &__box {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-    }
-    &__list {
-      margin-bottom: 20px;
-    }
+  }
+  .connection__box {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .connection__list {
+    margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .connection {
     margin-bottom: 60px;
-
-    &__subtitle {
-      font-size: 18px;
-      line-height: 21px;
-      margin-bottom: 15px;
-    }
-    &__list {
-      font-size: 14px;
-      line-height: 16px;
-      margin-bottom: 15px;
-
-      &_item {
-        font-size: 14px;
-        line-height: 16px;
-        margin-top: 15px;
-      }
-      &_item:first-child {
-        display: flex;
-        a {
-          img {
-            width: 25px;
-            height: 25px;
-          }
-        }
-      }
-    }
+  }
+  .connection__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 15px;
+  }
+  .connection__list {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+  .connection__list_item {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 15px;
+  }
+  .connection__list_item:first-child {
+    display: flex;
+  }
+  .connection__list_item_img {
+    width: 25px;
+    height: 25px;
   }
 }
